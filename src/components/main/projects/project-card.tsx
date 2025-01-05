@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github } from "lucide-react";
+import { ArrowRight, Link2 } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 
 interface ProjectCardProps {
@@ -77,7 +77,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
       <CardFooter className="flex-grow-0 p-6">
         <motion.div className="w-full" animate={{ y: isHovered ? 0 : 10 }}>
           <Button
-            className="w-full bg-stone-800 text-stone-100 hover:bg-stone-700 dark:bg-stone-200 dark:text-stone-800 dark:hover:bg-stone-300 transition-colors duration-300"
+            className="group w-full bg-stone-800 text-stone-100 hover:bg-stone-700 dark:bg-stone-200 dark:text-stone-800 dark:hover:bg-stone-300 transition-colors duration-300"
             asChild
           >
             <a
@@ -86,9 +86,9 @@ const ProjectCard: FC<ProjectCardProps> = ({
               rel="noopener noreferrer"
               className="flex items-center justify-center"
             >
-              <Github className="w-5 h-5 mr-2" />
-              View on GitHub
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <Link2 className="w-5 h-5 mr-2" />
+              Visit Website
+              <ArrowRight className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-2" />
             </a>
           </Button>
         </motion.div>

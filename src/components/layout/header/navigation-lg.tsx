@@ -10,13 +10,13 @@ const NavigationLg: FC = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center gap-5">
+    <nav className="flex items-center gap-5 ">
       {navigationItems.map(({ label, href }) => (
         <Link
           key={label}
           href={href}
           className={cn(
-            "relative py-1 text-sm text-stone-600 transition-colors hover:text-stone-900 dark:text-stone-300 dark:hover:text-stone-100",
+            "relative py-1 text-sm text-stone-500 transition-colors hover:text-stone-900 dark:text-stone-300 dark:hover:text-stone-100 z-50",
             pathname === href && [
               "text-stone-900 dark:text-stone-100",
               "after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-emerald-500",

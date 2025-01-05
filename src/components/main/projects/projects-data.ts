@@ -1,4 +1,5 @@
 import invoiceHubImage from "../../../../public/images/invoicehub.png";
+import positivus from "../../../../public/images/positivus.png";
 
 export const projectsData = [
   {
@@ -13,20 +14,11 @@ export const projectsData = [
   {
     id: 2,
 
-    title: "TaskManager",
+    title: "Positivus",
     description:
       "TaskManager is a powerful tool designed to help you stay organized. It allows you to track and prioritize your tasks with ease. The intuitive interface and advanced features make it an excellent choice for anyone looking to boost their productivity.",
     tags: ["react", "typescript", "tailwindcss", "redux"],
-    githubUrl: "https://github.com/example/task-manager",
-    imageUrl: invoiceHubImage,
-  },
-  {
-    id: 3,
-    title: "WeatherApp",
-    description:
-      "WeatherApp is a weather forecasting app that provides accurate and up-to-date weather information. With a simple interface and dynamic features, it allows users to check the weather anywhere in the world with a few clicks.",
-    tags: ["react", "typescript", "tailwindcss", "openweathermapapi"],
-    githubUrl: "https://github.com/example/weather-app",
-    imageUrl: invoiceHubImage,
+    githubUrl: "https://philipbaravi.github.io/Positivus/",
+    imageUrl: positivus,
   },
 ];
