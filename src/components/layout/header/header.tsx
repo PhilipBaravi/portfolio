@@ -5,6 +5,7 @@ import { ModeToggle } from "./mode-toggle";
 import LanguageSelector from "./language-selector";
 import CommandSelector from "./command-selector";
 import Navigation from "./navigation";
+import NavigationLg from "./navigation-lg";
 
 const Header: FC = () => {
   return (
@@ -14,11 +15,17 @@ const Header: FC = () => {
           <Logo />
         </div>
         <div className="mr-6 flex gap-x-4 justify-between items-center">
-          <ModeToggle />
+          <div className="hidden lg:block">
+            <NavigationLg />
+          </div>
           <Separator orientation="vertical" className="h-6" />
+          <ModeToggle />
+
           <LanguageSelector />
           <CommandSelector />
-          <Navigation />
+          <div className="lg:hidden">
+            <Navigation />
+          </div>
         </div>
       </nav>
     </header>

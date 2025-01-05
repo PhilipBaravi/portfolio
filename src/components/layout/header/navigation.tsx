@@ -1,27 +1,14 @@
 "use client";
 
 import { FC } from "react";
-import {
-  AlignJustify,
-  Pencil,
-  Book,
-  LayoutDashboard,
-  FolderGit2,
-  User,
-  Monitor,
-} from "lucide-react";
+import { AlignJustify } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
-
-const navigationItems = [
-  { id: 1, label: "Projects", icon: FolderGit2 },
-  { id: 2, label: "About", icon: User },
-  { id: 3, label: "Uses", icon: Monitor },
-];
+import { navigationItems } from "./nav-items";
 
 const Navigation: FC = () => {
   return (

@@ -11,21 +11,23 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="w-full min-h-screen bg-stone-100 dark:bg-stone-950 justify-center items-center flex flex-col">
+      <body>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <div className="max-w-[1400px]">
+          <div className="w-full h-[170vh] bg-stone-100 dark:bg-stone-950 flex flex-col">
             <Header />
-            <div className="pt-24">{children}</div>
+            <main className="flex-grow w-full flex flex-col items-center pt-[120px]">
+              {children}
+            </main>
             <Footer />
           </div>
         </ThemeProvider>
