@@ -2,11 +2,12 @@ import { FC } from "react";
 import MainBtn from "@/components/main-btn";
 import Link from "next/link";
 import P from "@/components/P";
+import A from "@/components/A";
 
 const CurrentProject: FC = () => (
   <div className="space-y-4">
     <h3 className="text-xl font-semibold text-stone-800 dark:text-stone-200">
-      Current Project: InvoiceHub
+      Current Project: <A href="https://invoicehub.space/">InvoiceHub</A>
     </h3>
     <P>
       I'm currently developing InvoiceHub, my first SaaS project, which has been
@@ -19,10 +20,16 @@ const CurrentProject: FC = () => (
       <li>Scalable state management</li>
       <li>Performance optimization</li>
       <li>Security best practices</li>
+      <li>Comprehensive CI/CD pipelines with GitHub Actions</li>
+      <li>Extensive automated testing with Jest and Cypress</li>
+      <li>Payment gateway integrations</li>
+      <li>Responsive design for various devices</li>
     </ul>
-    <Link href="/projects/invoicehub">
-      <MainBtn title="View InvoiceHub" />
-    </Link>
+    <div className="pt-4">
+      <Link href="/projects/invoicehub">
+        <MainBtn title="View InvoiceHub" />
+      </Link>
+    </div>
   </div>
 );
 

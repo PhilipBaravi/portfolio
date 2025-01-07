@@ -7,7 +7,7 @@ const CodingChallenges: FC = () => (
     <h3 className="text-xl font-semibold text-stone-800 dark:text-stone-200">
       Coding Challenges
     </h3>
-    <P>I regularly sharpen my problem-solving skills on Codewars: </P>
+    <P>From time to time I sharpen my problem-solving skills on Codewars: </P>
 
     <Image
       src="https://www.codewars.com/users/PhilipBaravi/badges/large"

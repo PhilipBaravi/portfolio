@@ -1,5 +1,6 @@
 import { FC } from "react";
 import P from "@/components/P";
+import A from "@/components/A";
 
 const LearningFocus: FC = () => (
   <div className="space-y-4">
@@ -7,9 +8,10 @@ const LearningFocus: FC = () => (
       Current Learning Focus
     </h3>
     <P>
-      I'm currently deepening my expertise in Next.js 14 and mastering
-      relational database design patterns. This continuous learning approach
-      ensures I stay at the forefront of web development practices.
+      I'm currently deepening my expertise in{" "}
+      <A href="https://nextjs.org/">Next.js 15</A> and mastering relational
+      database design patterns. This continuous learning approach ensures I stay
+      at the forefront of web development practices.
     </P>
   </div>
 );

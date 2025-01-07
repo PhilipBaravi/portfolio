@@ -21,6 +21,7 @@ const AboutDescription: FC = () => (
       I maintain an active presence on{" "}
       <Link
         href="https://github.com/PhilipBaravi"
+        target="_blank"
         className="text-blue-500 hover:underline dark:text-blue-400 inline-flex items-center gap-1"
       >
         GitHub

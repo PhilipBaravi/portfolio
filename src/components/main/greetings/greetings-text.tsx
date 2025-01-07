@@ -18,14 +18,16 @@ const GreetingsText: FC = () => {
         </p>
 
         <div className="flex flex-col gap-y-4">
-          <P title="Feel free to reach out to me at" />{" "}
-          <a
-            href="mailto:philipbaravi@gmail.com"
-            className="text-blue-500 hover:underline dark:text-blue-400"
-          >
-            philipbaravi@gmail.com
-          </a>
-          .
+          <P>
+            Feel free to reach out to me at{" "}
+            <a
+              href="mailto:philipbaravi@gmail.com"
+              className="text-blue-500 hover:underline dark:text-blue-400"
+            >
+              philipbaravi@gmail.com
+            </a>
+            .
+          </P>
         </div>
       </div>
 
