@@ -3,7 +3,7 @@ import UsesCards from "./uses-cards";
 
 const Uses: FC = () => {
   return (
-    <section className="w-[95%] md:w-[80%] lg:w-[75%] mx-auto">
+    <section className="mb-8 space-y-4 w-[90%] md:w-[80%] lg:w-[70%] mx-auto">
       <UsesCards />
     </section>
   );

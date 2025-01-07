@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Skills from "./skills";
 import ResumeButton from "./resume-button";
+import P from "@/components/P";
 
 const GreetingsText: FC = () => {
   return (
@@ -17,16 +18,14 @@ const GreetingsText: FC = () => {
         </p>
 
         <div className="flex flex-col gap-y-4">
-          <p className="text-md md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            Feel free to reach out to me at{" "}
-            <a
-              href="mailto:philipbaravi@gmail.com"
-              className="text-blue-500 hover:underline dark:text-blue-400"
-            >
-              philipbaravi@gmail.com
-            </a>
-            .
-          </p>
+          <P title="Feel free to reach out to me at" />{" "}
+          <a
+            href="mailto:philipbaravi@gmail.com"
+            className="text-blue-500 hover:underline dark:text-blue-400"
+          >
+            philipbaravi@gmail.com
+          </a>
+          .
         </div>
       </div>
 
