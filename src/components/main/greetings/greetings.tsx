@@ -4,7 +4,7 @@ import GreetingsText from "./greetings-text";
 
 const Greetings: FC = () => {
   return (
-    <section className="flex flex-col lg:flex-row justify-between items-center w-full  mx-auto gap-6 px-6 py-8">
+    <section className="flex flex-col lg:flex-row justify-between items-start w-full  mx-auto gap-6 px-6 py-8">
       {/* Text Section */}
       <div className="flex-1 w-full">
         <GreetingsText />

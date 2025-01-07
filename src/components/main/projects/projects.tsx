@@ -15,7 +15,7 @@ const Projects: FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <H1>Selected Projects</H1>
+        <H1 title="Selected Projects" />
       </motion.div>
 
       <div className="flex flex-col lg:flex-row gap-x-6 lg:gap-x-12 items-center flex-wrap justify-center gap-y-6 lg:gap-y-12">
