@@ -6,8 +6,17 @@ import ProjectCard from "./project-card";
 import { projectsData } from "./projects-data";
 import { motion } from "framer-motion";
 import MainBtn from "@/components/main-btn";
+import Link from "next/link";
 
-const Projects: FC = () => {
+type ProjectsProps = {
+  showButton?: boolean;
+  limit?: number; // Add a limit prop to control the number of projects displayed
+};
+
+const Projects: FC<ProjectsProps> = ({ showButton = true, limit }) => {
+  // Slice the projectsData array if a limit is provided
+  const displayedProjects = limit ? projectsData.slice(0, limit) : projectsData;
+
   return (
     <section className="flex flex-col justify-center items-center w-full mx-auto gap-6 px-6 py-8">
       <motion.div
@@ -15,11 +24,11 @@ const Projects: FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <H1 title="Selected Projects" />
+        {showButton && <H1 title="Selected Projects" />}
       </motion.div>
 
       <div className="flex flex-col lg:flex-row gap-x-6 lg:gap-x-12 items-center flex-wrap justify-center gap-y-6 lg:gap-y-12">
-        {projectsData.map((project, index) => (
+        {displayedProjects.map((project, index) => (
           <motion.div
             key={`${project.title}-${project.id}`}
             initial={{ opacity: 0, y: 20 }}
@@ -39,17 +48,24 @@ const Projects: FC = () => {
           </motion.div>
         ))}
       </div>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: 0.5,
-          delay: 0.5,
-        }}
-        className="w-full h-[60px] flex justify-center items-center pt-4"
-      >
-        <MainBtn title="See all projects" />
-      </motion.div>
+
+      {showButton && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.5,
+          }}
+          className="w-full h-[60px] flex justify-center items-center pt-4"
+        >
+          <div>
+            <Link href="/projects">
+              <MainBtn title="See all projects" />
+            </Link>
+          </div>
+        </motion.div>
+      )}
     </section>
   );
 };

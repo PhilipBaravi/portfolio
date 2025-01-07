@@ -16,7 +16,7 @@ const NavigationLg: FC = () => {
           key={label}
           href={href}
           className={cn(
-            "relative py-1 text-sm text-stone-500 transition-colors hover:text-stone-900 dark:text-stone-300 dark:hover:text-stone-100 z-50",
+            "relative py-1 text-md text-stone-500 transition-colors hover:text-stone-950 dark:text-stone-300 dark:hover:text-stone-500 z-50",
             pathname === href && [
               "text-stone-900 dark:text-stone-100",
               "after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-emerald-500",

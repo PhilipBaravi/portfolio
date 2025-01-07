@@ -21,4 +21,24 @@ export const projectsData = [
     githubUrl: "https://philipbaravi.github.io/Positivus/",
     imageUrl: positivus,
   },
+  {
+    id: 3,
+
+    title: "Positivus",
+    description:
+      "TaskManager is a powerful tool designed to help you stay organized. It allows you to track and prioritize your tasks with ease. The intuitive interface and advanced features make it an excellent choice for anyone looking to boost their productivity.",
+    tags: ["react", "typescript", "tailwindcss", "redux"],
+    githubUrl: "https://philipbaravi.github.io/Positivus/",
+    imageUrl: positivus,
+  },
+  {
+    id: 4,
+
+    title: "Positivus",
+    description:
+      "TaskManager is a powerful tool designed to help you stay organized. It allows you to track and prioritize your tasks with ease. The intuitive interface and advanced features make it an excellent choice for anyone looking to boost their productivity.",
+    tags: ["react", "typescript", "tailwindcss", "redux"],
+    githubUrl: "https://philipbaravi.github.io/Positivus/",
+    imageUrl: positivus,
+  },
 ];

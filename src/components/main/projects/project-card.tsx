@@ -64,13 +64,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
         </p>
         <div className="flex flex-wrap gap-2">
           {tags.map((tag, index) => (
-            <Badge
-              key={index}
-              variant="secondary"
-              className="bg-stone-200 text-stone-700 dark:bg-stone-700 dark:text-stone-200 px-2 py-1 text-sm"
-            >
-              {tag}
-            </Badge>
+            <Badge key={index}>{tag}</Badge>
           ))}
         </div>
       </CardContent>

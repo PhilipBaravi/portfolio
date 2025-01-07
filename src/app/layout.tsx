@@ -23,7 +23,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="w-full bg-stone-100 dark:bg-stone-950 flex flex-col">
+          <div className="w-full bg-stone-100 dark:bg-stone-950 flex flex-col ">
             <Header />
             <main className="flex-grow w-full flex flex-col items-center pt-[120px]">
               {children}

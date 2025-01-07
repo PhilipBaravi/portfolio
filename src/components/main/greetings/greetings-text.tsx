@@ -1,6 +1,6 @@
 import { FC } from "react";
-import Socials from "./socials/socials";
 import Skills from "./skills";
+import ResumeButton from "./resume-button";
 
 const GreetingsText: FC = () => {
   return (
@@ -15,6 +15,7 @@ const GreetingsText: FC = () => {
           on creating seamless user experiences and delivering scalable,
           maintainable code for dynamic projects. 🔧✨
         </p>
+
         <div className="flex flex-col gap-y-4">
           <p className="text-md md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             Feel free to reach out to me at{" "}
@@ -24,14 +25,13 @@ const GreetingsText: FC = () => {
             >
               philipbaravi@gmail.com
             </a>
-            , or find me on social media:
+            .
           </p>
-
-          <Socials />
         </div>
       </div>
 
       <Skills />
+      <ResumeButton />
     </div>
   );
 };
