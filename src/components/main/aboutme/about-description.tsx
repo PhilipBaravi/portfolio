@@ -5,9 +5,9 @@ import Link from "next/link";
 const AboutDescription: FC = () => (
   <>
     <P>
-      I'm a passionate React Front-End Developer 🚀 with expertise in building
-      sophisticated management systems and web applications. With a strong
-      foundation in modern web technologies ⚙️ and an eye for detail, I
+      I&apos;m a passionate React Front-End Developer 🚀 with expertise in
+      building sophisticated management systems and web applications. With a
+      strong foundation in modern web technologies ⚙️ and an eye for detail, I
       specialize in creating intuitive user interfaces that enhance business
       operations.
     </P>

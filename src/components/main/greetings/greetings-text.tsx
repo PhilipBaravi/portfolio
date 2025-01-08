@@ -9,7 +9,7 @@ const GreetingsText: FC = () => {
     <div className="max-w-2xl mx-auto px-4 py-8 flex flex-col justify-start items-start gap-y-6">
       <div className="flex flex-col gap-y-4">
         <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-gray-100 leading-tight tracking-tight mb-4">
-          Hi, I'm Philip – React Frontend Developer!
+          Hi, I&apos;m Philip – React Frontend Developer!
         </h1>
         <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
           👨‍💻 I specialize in building modern, user-friendly web applications

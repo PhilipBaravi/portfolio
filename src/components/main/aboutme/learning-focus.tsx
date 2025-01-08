@@ -8,7 +8,7 @@ const LearningFocus: FC = () => (
       Current Learning Focus
     </h3>
     <P>
-      I'm currently deepening my expertise in{" "}
+      I&apos;m currently deepening my expertise in{" "}
       <A href="https://nextjs.org/">Next.js 15</A> and mastering relational
       database design patterns. This continuous learning approach ensures I stay
       at the forefront of web development practices.

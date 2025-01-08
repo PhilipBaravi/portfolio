@@ -20,8 +20,9 @@ const CurrentProject: FC = () => (
     </CardHeader>
     <CardContent className="space-y-4">
       <p className="text-muted-foreground">
-        I'm currently developing InvoiceHub, my first SaaS project. It's been an
-        incredible journey implementing enterprise-level best practices! 🏗️
+        I&apos;m currently developing InvoiceHub, my first SaaS project.
+        It&apos;s been an incredible journey implementing enterprise-level best
+        practices! 🏗️
       </p>
 
       <div className="flex flex-wrap gap-2">
@@ -46,7 +47,7 @@ const CurrentProject: FC = () => (
           <p className="text-sm text-muted-foreground">
             Whipping up some fancy caching strategies to make data retrieval
             lightning-fast! ⚡ Expect smoother performance and a user experience
-            that'll knock your socks off! 🧦
+            that&apos;ll knock your socks off! 🧦
           </p>
         </CardContent>
       </Card>

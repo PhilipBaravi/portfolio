@@ -10,8 +10,8 @@ const CurrentProject: FC = () => (
       Current Project: <A href="https://invoicehub.space/">InvoiceHub</A>
     </h3>
     <P>
-      ⚙️ I'm currently developing InvoiceHub, my first SaaS project, which has
-      been an incredible journey in implementing enterprise-level best
+      ⚙️ I&apos;m currently developing InvoiceHub, my first SaaS project, which
+      has been an incredible journey in implementing enterprise-level best
       practices. This project showcases my expertise in:
     </P>
 
@@ -27,8 +27,8 @@ const CurrentProject: FC = () => (
     </ul>
 
     <P>
-      Currently, I'm focusing on implementing advanced caching strategies ⚡ to
-      enhance data retrieval, resulting in improved performance and user
+      Currently, I&apos;m focusing on implementing advanced caching strategies
+      ⚡ to enhance data retrieval, resulting in improved performance and user
       experience.
     </P>
 
