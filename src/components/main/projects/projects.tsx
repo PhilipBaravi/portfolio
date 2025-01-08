@@ -18,7 +18,7 @@ const Projects: FC<ProjectsProps> = ({ showButton = true, limit }) => {
   const displayedProjects = limit ? projectsData.slice(0, limit) : projectsData;
 
   return (
-    <section className="flex flex-col justify-center items-center w-full mx-auto gap-6 px-6 py-8">
+    <section className="mb-8 space-y-4 w-[90%] md:w-[80%] lg:w-[70%] mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

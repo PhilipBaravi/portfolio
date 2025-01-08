@@ -8,7 +8,7 @@ export const projectsData = [
     description:
       "This is a really cool project that does amazing things. It's built with cutting-edge technology and solves complex problems in an elegant way. The increased card height now allows for a larger project image and more detailed description, providing a comprehensive overview of the project at a glance.",
     tags: ["react", "typescript", "tailwincss", "nextjs", "framermotion"],
-    githubUrl: "https://github.com/example/awesome-projects",
+    githubUrl: "https://invoicehub.space/",
     imageUrl: invoiceHubImage,
   },
   {

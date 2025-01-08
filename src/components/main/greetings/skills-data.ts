@@ -4,4 +4,8 @@ export const skillsData = [
   "Next.js",
   "Tailwind CSS",
   "Git",
+  "TypeScript",
+  "Next.js",
+  "Tailwind CSS",
+  "Git",
 ];

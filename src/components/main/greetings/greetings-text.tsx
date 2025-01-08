@@ -2,6 +2,7 @@ import { FC } from "react";
 import Skills from "./skills";
 import ResumeButton from "./resume-button";
 import P from "@/components/P";
+import MainBtn from "@/components/main-btn";
 
 const GreetingsText: FC = () => {
   return (
@@ -32,7 +33,10 @@ const GreetingsText: FC = () => {
       </div>
 
       <Skills />
-      <ResumeButton />
+      <div className="flex gap-x-6">
+        <ResumeButton />
+        <MainBtn title="More about me" />
+      </div>
     </div>
   );
 };
