@@ -33,7 +33,7 @@ const GreetingsText: FC = () => {
       </div>
 
       <Skills />
-      <div className="flex gap-x-6">
+      <div className="flex flex-col md:flex-row gap-x-6 gap-y-4">
         <ResumeButton />
         <MainBtn title="More about me" />
       </div>
