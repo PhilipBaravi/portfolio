@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Delius_Swash_Caps } from "@next/font/google";
+import { Delius_Swash_Caps } from "next/font/google";
 import Link from "next/link";
 
 const deliusSwashCaps = Delius_Swash_Caps({
