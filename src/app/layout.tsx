@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/layout/header/header";
 import Footer from "@/components/layout/footer/footer";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -27,6 +28,7 @@ export default function RootLayout({
             <Header />
             <main className="flex-grow w-full flex flex-col items-center pt-[120px]">
               {children}
+              <Analytics />
             </main>
             <Footer />
           </div>
