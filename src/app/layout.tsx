@@ -16,14 +16,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className="w-screen overflow-x-hidden">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
-          <div className="w-full bg-stone-100 dark:bg-stone-950 flex flex-col ">
+          <div className="w-screen bg-stone-100 dark:bg-stone-950 flex flex-col ">
             <Header />
             <main className="flex-grow w-full flex flex-col items-center pt-[120px]">
               {children}
