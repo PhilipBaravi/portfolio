@@ -20,6 +20,7 @@ const DiscordIcon: FC = () => {
         description: "Discord link copied to the clipboard",
       });
     } catch (error) {
+      console.error(error);
       toast({
         title: "Error!",
         description: "Failed to copy the Discord link",
