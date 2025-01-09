@@ -1,6 +1,6 @@
 "use client";
 
-import { FaReact, FaNodeJs, FaGithub, FaCss3Alt } from "react-icons/fa";
+import { FaReact, FaGithub, FaCss3Alt } from "react-icons/fa";
 import {
   SiTypescript,
   SiJavascript,
@@ -14,7 +14,6 @@ import {
   SiPrettier,
   SiGit,
   SiAxios,
-  SiVitest,
   SiKeycloak,
   SiI18Next,
   SiShadcnui,
@@ -23,6 +22,7 @@ import {
   SiFramer,
   SiNpm,
   SiOpenai,
+  SiWordpress,
 } from "react-icons/si";
 
 export const tools = {
@@ -154,7 +154,7 @@ export const tools = {
       name: "GitHub",
       description: "Code hosting platform for version control",
       icon: <FaGithub className="w-full h-full" />,
-      href: "https://github.com/",
+      href: "https://github.com/PhilipBaravi",
     },
   ],
   Authentication: [
@@ -177,6 +177,12 @@ export const tools = {
       description: "AI Tool",
       icon: <SiOpenai className="w-full h-full" />,
       href: "https://openai.com/",
+    },
+    {
+      name: "Wordpress",
+      description: "Website building platform",
+      icon: <SiWordpress className="w-full h-full" />,
+      href: "https://wordpress.com/",
     },
   ],
 };

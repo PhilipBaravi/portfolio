@@ -43,7 +43,7 @@ const iconVariants = {
 const UsesCard = ({ name, description, icon, href }: UsesCardProps) => {
   const Wrapper: React.FC<{ children: React.ReactNode }> = ({ children }) =>
     href ? (
-      <Link href={href} className="block">
+      <Link href={href} className="block" target="_blank">
         {children}
       </Link>
     ) : (

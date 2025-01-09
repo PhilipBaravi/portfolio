@@ -49,7 +49,7 @@ export const projectsData = [
     description:
       "Georgian Technical University (GTU, formerly V.I. Lenin Georgian Polytechnical Institute) is the main and largest technical university of Georgia. It is located in the capital city of Tbilisi.",
     tags: ["bitrix", "forms", "markup", "javascript"],
-    githubUrl: "https://gtu.ge/en/",
+    githubUrl: "https://old.gtu.ge/Eng/",
     imageUrl: gtu,
   },
   {

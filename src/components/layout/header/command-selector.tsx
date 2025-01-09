@@ -21,13 +21,12 @@ import { LucideCommand } from "lucide-react";
 
 const CommandSelector: FC = () => {
   const [open, setOpen] = useState(false);
-  const router = useRouter();
 
   const handleItemClick = (item: CommandItemType) => {
     if (item.action) {
       item.action();
     } else if (item.href) {
-      router.push(item.href);
+      window.open(item.href, "_blank", "noopener,noreferrer");
     }
   };
 
