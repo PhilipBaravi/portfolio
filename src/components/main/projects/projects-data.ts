@@ -18,6 +18,12 @@ export const projectsData = [
       "shadcn",
       "keycloak",
       "framermotion",
+      "react-signature-canvas",
+      "lucide-react",
+      "recharts",
+      "radix-ui",
+      "react-pdf/renderer",
+      "vercel",
     ],
     githubUrl: "https://invoicehub.space/",
     imageUrl: invoiceHubImage,
@@ -35,26 +41,6 @@ export const projectsData = [
   {
     id: 3,
 
-    title: "Georgian TravelGuide",
-    description:
-      "GeorgianTravelGuide, provides users with the information about Georgia’s most interesting and remarkable places in the most convenient way, which will assist user to select the optimal routes and plan the tours effectively.",
-    tags: ["html", "css", "javascript", "jquery", "bootstrap"],
-    githubUrl: "https://georgiantravelguide.com/en",
-    imageUrl: travelguide,
-  },
-  {
-    id: 4,
-
-    title: "Georgian Technical University",
-    description:
-      "Georgian Technical University (GTU, formerly V.I. Lenin Georgian Polytechnical Institute) is the main and largest technical university of Georgia. It is located in the capital city of Tbilisi.",
-    tags: ["bitrix", "forms", "markup", "javascript"],
-    githubUrl: "https://old.gtu.ge/Eng/",
-    imageUrl: gtu,
-  },
-  {
-    id: 5,
-
     title: "React Hooks Explorer",
     description:
       "React Hooks Explorer – an interactive project designed to help developers master the most commonly used React hooks through hands-on practice. Whether you're learning, brushing up on your knowledge, or preparing for interviews, this project offers descriptions, examples, exercises, and interview questions for each hook, all in one place.",
@@ -66,5 +52,25 @@ export const projectsData = [
     ],
     githubUrl: "https://philipbaravi.github.io/react-hooks/",
     imageUrl: hooks,
+  },
+  {
+    id: 4,
+
+    title: "Georgian TravelGuide",
+    description:
+      "GeorgianTravelGuide, provides users with the information about Georgia’s most interesting and remarkable places in the most convenient way, which will assist user to select the optimal routes and plan the tours effectively.",
+    tags: ["html", "css", "javascript", "jquery", "bootstrap"],
+    githubUrl: "https://georgiantravelguide.com/en",
+    imageUrl: travelguide,
+  },
+  {
+    id: 5,
+
+    title: "Georgian Technical University",
+    description:
+      "Georgian Technical University (GTU, formerly V.I. Lenin Georgian Polytechnical Institute) is the main and largest technical university of Georgia. It is located in the capital city of Tbilisi.",
+    tags: ["bitrix", "forms", "markup", "javascript"],
+    githubUrl: "https://old.gtu.ge/Eng/",
+    imageUrl: gtu,
   },
 ];
