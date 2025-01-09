@@ -47,14 +47,14 @@ const ProjectCard: FC<ProjectCardProps> = ({
         <Image
           src={imageUrl}
           alt={title}
-          layout="fill"
-          objectFit="cover"
-          className="transition-transform duration-300 ease-in-out"
-          style={{
-            transform: isHovered ? "scale(1.05)" : "scale(1)",
-          }}
+          fill
+          sizes="100vw"
+          className={`object-contain transition-transform duration-300 ease-in-out ${
+            isHovered ? "scale-105" : "scale-100"
+          }`}
         />
       </div>
+
       <CardHeader className="flex-grow-0 p-4">
         <CardTitle className="text-xl font-bold text-stone-800 dark:text-stone-100">
           {title}

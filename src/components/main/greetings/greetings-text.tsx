@@ -11,7 +11,7 @@ const GreetingsText: FC = () => {
         <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-gray-100 leading-tight tracking-tight mb-4">
           Hi, I&apos;m Philip – React Frontend Developer!
         </h1>
-        <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p className="text-lg md:text-xl text-gray-700 dark:text-stone-300 leading-relaxed">
           👨‍💻 I specialize in building modern, user-friendly web applications
           using React, TypeScript, and cutting-edge technologies. 🌟 My focus is
           on creating seamless user experiences and delivering scalable,

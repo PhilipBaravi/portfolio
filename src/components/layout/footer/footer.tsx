@@ -1,17 +1,50 @@
 import { FC } from "react";
 import { Separator } from "@/components/ui/separator";
-import CodeWarsIcon from "./coddewars-icon";
+import Socials from "@/components/main/greetings/socials/socials";
 
 const Footer: FC = () => {
   return (
-    <footer className="w-full flex justify-between items-center h-[80px] bottom-0 left-0 right-0 z-50">
-      <div className="w-[95%] md:w-[80%] h-[60px] py-[10px] mx-auto rounded-lg bg-gradient-to-r from-stone-400/10 via-stone-400/20 to-stone-400/10 dark:from-stone-800/10 dark:via-stone-800/20 dark:to-stone-800/10 backdrop-blur-md border border-white/10 dark:border-white/5 flex justify-between items-center  top-6 z-50">
-        <div className="ml-6">
-          <p>2025 Philip Baravi</p>
-        </div>
-        <div className="mr-6 flex gap-x-4 justify-between items-center">
-          <Separator orientation="vertical" className="h-6" />
-          <CodeWarsIcon />
+    <footer className="w-full py-4 px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-7xl mx-auto rounded-lg bg-gradient-to-r from-stone-400/10 via-stone-400/20 to-stone-400/10 dark:from-stone-800/10 dark:via-stone-800/20 dark:to-stone-800/10 backdrop-blur-md border border-white/10 dark:border-white/5">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 p-4">
+          <div className="text-center sm:text-left">
+            <p className="text-sm text-stone-700 dark:text-stone-300">
+              Philip Baravi © {new Date().getFullYear()}
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <div className="flex items-center gap-2">
+              <p className="text-sm text-stone-600 dark:text-stone-400">
+                Email:
+              </p>
+              <a
+                href="mailto:philipbaravi@gmail.com"
+                className="text-sm text-stone-700 dark:text-stone-300 hover:underline"
+              >
+                philipbaravi@gmail.com
+              </a>
+            </div>
+            <Separator
+              orientation="vertical"
+              className="hidden sm:block h-6 bg-stone-400 dark:bg-stone-600"
+            />
+            <div className="flex items-center gap-2">
+              <p className="text-sm text-stone-600 dark:text-stone-400">
+                Tel.:
+              </p>
+              <a
+                href="tel:+34664587841"
+                className="text-sm text-stone-700 dark:text-stone-300 hover:underline"
+              >
+                +34 (664) 587-841
+              </a>
+            </div>
+            <Separator
+              orientation="vertical"
+              className="hidden sm:block h-6 bg-stone-400 dark:bg-stone-600"
+            />
+            <Socials />
+          </div>
         </div>
       </div>
     </footer>

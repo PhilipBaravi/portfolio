@@ -21,8 +21,6 @@ const CurrentProject: FC = () => (
       <li>Performance optimization 🚀</li>
       <li>Security best practices 🔒</li>
       <li>Comprehensive CI/CD pipelines with GitHub Actions 🔁</li>
-      <li>Extensive automated testing with Jest and Cypress 🤖</li>
-      <li>Payment gateway integrations 💳</li>
       <li>Responsive design for various devices 📱</li>
     </ul>
 

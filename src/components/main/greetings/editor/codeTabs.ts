@@ -6,77 +6,64 @@ type CodeTab = {
 
 const codeTabs: CodeTab[] = [
   {
-    name: "App.tsx",
-    language: "tsx",
-    code: `import { useState, useEffect, FC } from 'react';
-  
-  const AwesomeComponent: FC = () => {
-    const [count, setCount] = useState(0);
-  
-    useEffect(() => {
-      const timer = setInterval(() => {
-        setCount((prevCount) => prevCount + 1);
-      }, 1000);
-  
-      return () => clearInterval(timer);
-    }, []);
-  
-    return (
-      <div className="p-4 bg-stone-800 text-stone-100">
-        <h1 className="text-2xl font-bold mb-2">
-          Welcome to My Portfolio
-        </h1>
-        <p>This component has been running for {count} seconds.</p>
-      </div>
-    );
-  };
-  
-  export default AwesomeComponent;`,
-  },
-  {
-    name: "package.json",
+    name: "aboutme.json",
     language: "json",
     code: `{
-    "name": "john-doe-portfolio",
-    "version": "1.0.0",
-    "description": "John Doe's Web Developer Portfolio",
+    "name": "Philip",
+    "age" : 26,
+    "description": "React Frontend Developer",
     "author": {
-      "name": "John Doe",
-      "email": "john@example.com",
-      "url": "https://johndoe.dev"
+      "name": "Philip",
+      "email": "philipbaravi@gmail.com",
+      "url": "https://www.linkedin.com/in/philip-baravi-2b2a521a2/"
     },
     "skills": [
       "React",
       "Next.js",
       "TypeScript",
+      "Javascript",
       "Tailwind CSS",
+      "React Router",
       "Node.js",
-      "GraphQL"
+      "Shadcn",
+      "Keycloak",
+      "Git",
     ],
     "experience": [
       {
-        "company": "Tech Innovators Inc.",
-        "position": "Senior Frontend Developer",
-        "duration": "2020 - Present"
+        "company": "InvoiceHub",
+        "position": "Frontend Developer",
+        "duration": "2024 - Present"
       },
       {
-        "company": "Web Solutions Ltd.",
-        "position": "Full Stack Developer",
-        "duration": "2018 - 2020"
+        "company": "Upwork",
+        "position": "Wordpress Developer",
+        "duration": "2024 - 2024"
+      },
+        {
+        "company": "Georgian Technical University",
+        "position": "Bitrix Integration Specialist",
+        "duration": "2020 - 2021"
+      },
+      {
+        "company": "Georgian Travelguide",
+        "position": "Frontend Developer",
+        "duration": "2020 - 2020"
       }
     ],
     "education": {
       "degree": "BSc in Computer Science",
-      "institution": "Tech University",
+      "institution": "University Of Georgia",
       "year": 2018
     },
     "interests": [
-      "Open Source Contribution",
+      "Algorithms",
       "UI/UX Design",
       "Machine Learning"
     ]
   }`,
   },
+
   {
     name: "api.ts",
     language: "typescript",
@@ -88,9 +75,9 @@ const codeTabs: CodeTab[] = [
   ) {
     if (req.method === 'GET') {
       const projects = [
-        { id: 1, name: 'E-commerce Platform', tech: ['Next.js', 'GraphQL', 'MongoDB'] },
-        { id: 2, name: 'Task Management App', tech: ['React', 'Redux', 'Node.js'] },
-        { id: 3, name: 'Social Media Dashboard', tech: ['Vue.js', 'Express', 'PostgreSQL'] },
+        { id: 1, name: 'InvoiceHub', tech: ['React', 'Typescript', 'React Router', 'Keycloak', 'TailwindCss', 'Shadcn UI', 'Vercel'] },
+        { id: 2, name: 'Positivus', tech: ['React', 'React Router', 'Algorithms', 'Monaco Editor'] },
+        { id: 3, name: 'Georgian TravelGuide', tech: ['javascript', 'html', 'css', 'bootstrap'] },
       ];
   
       res.status(200).json({ projects });

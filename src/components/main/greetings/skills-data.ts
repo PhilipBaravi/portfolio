@@ -1,11 +1,9 @@
 export const skillsData = [
   "React",
-  "TypeScript",
   "Next.js",
+  "Javascript",
+  "TypeScript",
   "Tailwind CSS",
   "Git",
-  "TypeScript",
-  "Next.js",
-  "Tailwind CSS",
-  "Git",
+  "Vercel",
 ];

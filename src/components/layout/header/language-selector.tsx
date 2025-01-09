@@ -17,7 +17,7 @@ const LanguageSelector: FC = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="hover:bg-stone-300/50 dark:hover:bg-stone-800/50 rounded-lg cursor-pointer hover:scale-[1.1] focus:outline-none">
+        <button className="hover:bg-stone-300/50 dark:hover:bg-stone-800/50 rounded-lg cursor-pointer hover:scale-[1.1]">
           <Languages className="m-2" size="20" strokeWidth={1.5} />
         </button>
       </DropdownMenuTrigger>
