@@ -9,7 +9,8 @@ const Footer: FC = () => {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 p-4">
           <div className="text-center sm:text-left">
             <p className="text-sm text-stone-700 dark:text-stone-300">
-              Philip Baravi © {new Date().getFullYear()}
+              Philip Baravi © {new Date().getFullYear()}{" "}
+              {/* Don't mind me for using getfullyear :D */}
             </p>
           </div>
           <div className="flex flex-col sm:flex-row items-center gap-4">

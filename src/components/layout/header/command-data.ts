@@ -1,12 +1,17 @@
-import { Code, FileUser, LucideCommand } from "lucide-react";
+import { Code, FileUser, LucideCommand, Copy } from "lucide-react";
 import { handleDownload } from "@/lib/download";
 
+export interface ToastOptions {
+  title: string;
+  description: string;
+  variant?: "default" | "destructive" | null;
+}
 export interface CommandItem {
   icon: React.ElementType;
   label: string;
   shortcut?: string;
   href?: string;
-  action?: () => void;
+  action?: (toast?: (options: ToastOptions) => void) => void;
 }
 
 export interface CommandGroup {
@@ -18,6 +23,27 @@ export const commandData: CommandGroup[] = [
   {
     heading: "General",
     items: [
+      {
+        icon: Copy,
+        label: "Copy Link",
+        action: (toast) => {
+          if (toast && "clipboard" in navigator) {
+            navigator.clipboard.writeText(
+              "https://portfolio-git-master-fbaravi121-gmailcoms-projects.vercel.app/"
+            );
+            toast({
+              title: "Copied!",
+              description: "Link copied to the clipboard.",
+            });
+          } else if (toast) {
+            toast({
+              title: "Error!",
+              description: "Clipboard API not supported.",
+              variant: "destructive",
+            });
+          }
+        },
+      },
       {
         icon: Code,
         label: "Source Code",

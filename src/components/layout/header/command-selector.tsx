@@ -1,7 +1,7 @@
 "use client";
 
 import { FC, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useToast } from "@/hooks/use-toast";
 import IconWrap from "./icon-wrap";
 import { Button } from "@/components/ui/button";
 import {
@@ -15,12 +15,25 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from "@/components/ui/command";
-import { commandData, CommandItem as CommandItemType } from "./command-data";
+import {
+  commandData as rawCommandData,
+  CommandItem as CommandItemType,
+} from "./command-data";
 import { DialogTitle } from "@radix-ui/react-dialog";
 import { LucideCommand } from "lucide-react";
 
 const CommandSelector: FC = () => {
   const [open, setOpen] = useState(false);
+  const { toast } = useToast();
+
+  // Attach toast to command data
+  const commandData = rawCommandData.map((group) => ({
+    ...group,
+    items: group.items.map((item) => ({
+      ...item,
+      action: item.action ? () => item.action!(toast) : undefined,
+    })),
+  }));
 
   const handleItemClick = (item: CommandItemType) => {
     if (item.action) {

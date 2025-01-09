@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/layout/header/header";
 import Footer from "@/components/layout/footer/footer";
 import { Analytics } from "@vercel/analytics/react";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -30,6 +31,7 @@ export default function RootLayout({
               {children}
               <Analytics />
             </main>
+            <Toaster />
             <Footer />
           </div>
         </ThemeProvider>
