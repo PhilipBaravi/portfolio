@@ -1,7 +1,7 @@
 "use client";
 
 import { FC, useState } from "react";
-import { LucideCommand, Link, Code } from "lucide-react";
+import { useRouter } from "next/navigation";
 import IconWrap from "./icon-wrap";
 import { Button } from "@/components/ui/button";
 import {
@@ -15,10 +15,21 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from "@/components/ui/command";
-import { DialogDescription, DialogTitle } from "@radix-ui/react-dialog";
+import { commandData, CommandItem as CommandItemType } from "./command-data";
+import { DialogTitle } from "@radix-ui/react-dialog";
+import { LucideCommand } from "lucide-react";
 
 const CommandSelector: FC = () => {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+
+  const handleItemClick = (item: CommandItemType) => {
+    if (item.action) {
+      item.action();
+    } else if (item.href) {
+      router.push(item.href);
+    }
+  };
 
   return (
     <>
@@ -33,58 +44,31 @@ const CommandSelector: FC = () => {
         </IconWrap>
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <DialogTitle />
-        <DialogDescription />
+        <DialogTitle></DialogTitle>
         <Command>
           <CommandInput placeholder="Type a command or search..." />
           <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
-            <CommandGroup heading="General">
-              <CommandItem className="cursor-pointer">
-                <Code className="mr-2" size="22" strokeWidth={2} />
-                <span>Source Code</span>
-              </CommandItem>
-              <CommandItem className="cursor-pointer">
-                <Link className="mr-2" size="22" strokeWidth={2} />
-                <span>Copy Link</span>
-              </CommandItem>
-            </CommandGroup>
-            <CommandSeparator />
-            <CommandGroup heading="Projects">
-              <CommandItem>
-                <LucideCommand className="mr-2" size="22" strokeWidth={1.5} />
-                <span>InvoiceHub</span>
-                <CommandShortcut>⌘P</CommandShortcut>
-              </CommandItem>
-              <CommandItem>
-                <LucideCommand className="mr-2" size="22" strokeWidth={1.5} />
-                <span>LinkedIn</span>
-                <CommandShortcut>⌘B</CommandShortcut>
-              </CommandItem>
-              <CommandItem>
-                <LucideCommand className="mr-2" size="22" strokeWidth={1.5} />
-                <span>Discord</span>
-                <CommandShortcut>⌘j</CommandShortcut>
-              </CommandItem>
-            </CommandGroup>
-            <CommandSeparator />
-            <CommandGroup heading="Socials">
-              <CommandItem>
-                <LucideCommand className="mr-2" size="22" strokeWidth={1.5} />
-                <span>Github</span>
-                <CommandShortcut>⌘P</CommandShortcut>
-              </CommandItem>
-              <CommandItem>
-                <LucideCommand className="mr-2" size="22" strokeWidth={1.5} />
-                <span>LinkedIn</span>
-                <CommandShortcut>⌘B</CommandShortcut>
-              </CommandItem>
-              <CommandItem>
-                <LucideCommand className="mr-2" size="22" strokeWidth={1.5} />
-                <span>Discord</span>
-                <CommandShortcut>⌘S</CommandShortcut>
-              </CommandItem>
-            </CommandGroup>
+            {commandData.map((group, index) => (
+              <div key={group.heading}>
+                <CommandGroup heading={group.heading}>
+                  {group.items.map((item) => (
+                    <CommandItem
+                      key={item.label}
+                      className="cursor-pointer"
+                      onSelect={() => handleItemClick(item)}
+                    >
+                      <item.icon className="mr-2" size={22} strokeWidth={2} />
+                      <span>{item.label}</span>
+                      {item.shortcut && (
+                        <CommandShortcut>{item.shortcut}</CommandShortcut>
+                      )}
+                    </CommandItem>
+                  ))}
+                </CommandGroup>
+                {index < commandData.length - 1 && <CommandSeparator />}
+              </div>
+            ))}
           </CommandList>
         </Command>
       </CommandDialog>

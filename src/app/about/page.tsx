@@ -6,7 +6,7 @@ export default function AboutMePage() {
     <section className="w-full h-auto mx-auto">
       <SectionHeading
         sectionTitle="About me"
-        sectionDescription="👋 Hi there! I am Philip, a student who loves web development."
+        sectionDescription="👋 Hi there! I am Philip, a guy who loves web development."
       />
       <AboutMe />
     </section>

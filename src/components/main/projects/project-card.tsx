@@ -49,7 +49,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
           alt={title}
           fill
           sizes="100vw"
-          className={`object-contain transition-transform duration-300 ease-in-out ${
+          className={`transition-transform duration-300 ease-in-out ${
             isHovered ? "scale-105" : "scale-100"
           }`}
         />

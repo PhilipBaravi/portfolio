@@ -17,6 +17,12 @@ import {
   SiVitest,
   SiKeycloak,
   SiI18Next,
+  SiShadcnui,
+  SiFigma,
+  SiBootstrap,
+  SiFramer,
+  SiNpm,
+  SiOpenai,
 } from "react-icons/si";
 
 export const tools = {
@@ -77,6 +83,33 @@ export const tools = {
       icon: <SiI18Next className="w-full h-full" />,
       href: "https://www.i18next.com/",
     },
+    {
+      name: "Framer Motion",
+      description: " For animations and transitions.",
+      icon: <SiFramer className="w-full h-full" />,
+      href: "https://motion.dev/",
+    },
+  ],
+  "UI/UX": [
+    {
+      name: "Shadcn UI",
+      description: "For integrating pre-styled components with Tailwind CSS.",
+      icon: <SiShadcnui className="w-full h-full" />,
+      href: "https://ui.shadcn.com/",
+    },
+    {
+      name: "Figma",
+      description:
+        "Figma helps design and development teams build great products, together.",
+      icon: <SiFigma className="w-full h-full" />,
+      href: "https://www.figma.com/",
+    },
+    {
+      name: "Bootstrap",
+      description: "Powerful, extensible, and feature-packed frontend toolkit.",
+      icon: <SiBootstrap className="w-full h-full" />,
+      href: "https://getbootstrap.com/",
+    },
   ],
   "Build Tools": [
     {
@@ -124,24 +157,26 @@ export const tools = {
       href: "https://github.com/",
     },
   ],
-  "Other Tools": [
+  Authentication: [
     {
       name: "Keycloak",
       description: "Open-source identity and access management",
       icon: <SiKeycloak className="w-full h-full" />,
       href: "https://www.keycloak.org/",
     },
+  ],
+  "Other Tools": [
     {
-      name: "Vitest",
-      description: "Unit testing framework",
-      icon: <SiVitest className="w-full h-full" />,
-      href: "https://vitest.dev/",
+      name: "npm",
+      description: "Node package manager.",
+      icon: <SiNpm className="w-full h-full" />,
+      href: "https://www.npmjs.com/",
     },
     {
-      name: "Playwright",
-      description: "End-to-end testing framework",
-      icon: <FaNodeJs className="w-full h-full" />,
-      href: "https://playwright.dev/",
+      name: "ChatGPT",
+      description: "AI Tool",
+      icon: <SiOpenai className="w-full h-full" />,
+      href: "https://openai.com/",
     },
   ],
 };

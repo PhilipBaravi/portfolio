@@ -15,6 +15,7 @@ const codeTabs: CodeTab[] = [
     "author": {
       "name": "Philip",
       "email": "philipbaravi@gmail.com",
+      "tel": "+34 (664) 587-841",
       "url": "https://www.linkedin.com/in/philip-baravi-2b2a521a2/"
     },
     "skills": [
