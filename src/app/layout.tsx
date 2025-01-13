@@ -6,7 +6,7 @@ import Footer from "@/components/layout/footer/footer";
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/toaster";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Portfolio",
