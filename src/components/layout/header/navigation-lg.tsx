@@ -5,9 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { navigationItems } from "./nav-items";
+import { useTranslations } from "next-intl";
 
 const NavigationLg: FC = () => {
   const pathname = usePathname();
+  const t = useTranslations("HomePage");
 
   return (
     <nav className="flex items-center gap-5">
@@ -24,7 +26,7 @@ const NavigationLg: FC = () => {
             ]
           )}
         >
-          {label}
+          {t(`nav.${label}`)}
         </Link>
       ))}
     </nav>

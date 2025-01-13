@@ -6,7 +6,33 @@
     "aboutMeBtn": "Más sobre mí",
     "resumeBtn": "Descargar currículum",
     "resumeBtnDownloading": "Descargando...",
-    "myStack": "Mi stack tecnológico preferido"
+    "myStack": "Mi stack tecnológico preferido",
+    "nav": {
+      "home": "Inicio",
+      "projects": "Proyectos",
+      "about": "Sobre mí",
+      "technologies": "Tecnologías"
+    },
+    "command": {
+      "general": "General",
+      "copy": "Copiar enlace",
+      "copySuccess": "¡Copiado!",
+      "copySuccessMessage": "Enlace copiado al portapapeles.",
+      "copyFail": "¡Error!",
+      "copyFailMessage": "API del portapapeles no soportada.",
+      "sourceCode": "Código fuente",
+      "downloadResume": "Descargar currículum",
+      "projects": "Proyectos",
+      "socials": "Redes sociales",
+      "invoiceHub": "InvoiceHub",
+      "positivus": "Positivus",
+      "reactHooksExplorer": "Explorador de React Hooks",
+      "georgianTravelguide": "Guía de viajes de Georgia",
+      "georgianTechnicalUniversity": "Universidad Técnica de Georgia",
+      "github": "Github",
+      "linkedin": "LinkedIn",
+      "discord": "Discord"
+    }
   },
   "AboutMe": {
     "title": "Sobre mí",

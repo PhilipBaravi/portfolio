@@ -10,8 +10,10 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { navigationItems } from "./nav-items";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const Navigation: FC = () => {
+  const t = useTranslations("HomePage");
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -27,7 +29,7 @@ const Navigation: FC = () => {
           >
             <Link href={href}>
               <Icon className="w-4 h-4" />
-              {label}
+              {t(`nav.${label}`)}
             </Link>
           </DropdownMenuItem>
         ))}

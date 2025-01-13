@@ -21,24 +21,22 @@ export interface CommandGroup {
 
 export const commandData: CommandGroup[] = [
   {
-    heading: "General",
+    heading: "command.general", // use translation key
     items: [
       {
         icon: Copy,
-        label: "Copy Link",
+        label: "command.copy",
         action: (toast) => {
           if (toast && "clipboard" in navigator) {
-            navigator.clipboard.writeText(
-              "https://portfolio-git-master-fbaravi121-gmailcoms-projects.vercel.app/"
-            );
+            navigator.clipboard.writeText("https://portfolio-url.example.com/");
             toast({
-              title: "Copied!",
-              description: "Link copied to the clipboard.",
+              title: "command.copySuccess", // Key for title
+              description: "command.copySuccessMessage", // Key for description
             });
           } else if (toast) {
             toast({
-              title: "Error!",
-              description: "Clipboard API not supported.",
+              title: "command.copyFail",
+              description: "command.copyFailMessage",
               variant: "destructive",
             });
           }
@@ -46,69 +44,69 @@ export const commandData: CommandGroup[] = [
       },
       {
         icon: Code,
-        label: "Source Code",
+        label: "command.sourceCode",
         href: "https://github.com/PhilipBaravi/portfolio",
       },
       {
         icon: FileUser,
-        label: "Download Resume",
+        label: "command.downloadResume",
         action: () => handleDownload("/resume.pdf", "resume.pdf"),
       },
     ],
   },
   {
-    heading: "Projects",
+    heading: "command.projects",
     items: [
       {
         icon: LucideCommand,
-        label: "InvoiceHub",
+        label: "command.invoiceHub",
         shortcut: "⌘I",
         href: "https://www.invoicehub.space/",
       },
       {
         icon: LucideCommand,
-        label: "Positivus",
+        label: "command.positivus",
         shortcut: "⌘P",
         href: "https://philipbaravi.github.io/Positivus/",
       },
       {
         icon: LucideCommand,
-        label: "React Hooks Explorer",
+        label: "command.reactHooksExplorer",
         shortcut: "⌘R",
         href: "https://philipbaravi.github.io/react-hooks/",
       },
       {
         icon: LucideCommand,
-        label: "Georgian Travelguide",
+        label: "command.georgianTravelguide",
         shortcut: "⌘T",
         href: "https://georgiantravelguide.com/en",
       },
       {
         icon: LucideCommand,
-        label: "Georgian Technical University",
+        label: "command.georgianTechnicalUniversity",
         shortcut: "⌘U",
         href: "https://old.gtu.ge/Eng/",
       },
     ],
   },
   {
-    heading: "Socials",
+    heading: "command.socials",
     items: [
       {
         icon: LucideCommand,
-        label: "Github",
+        label: "command.github",
         shortcut: "⌘G",
         href: "https://github.com/PhilipBaravi",
       },
       {
         icon: LucideCommand,
-        label: "LinkedIn",
+        label: "command.linkedin",
         shortcut: "⌘L",
         href: "https://www.linkedin.com/in/philip-baravi-2b2a521a2/",
       },
       {
         icon: LucideCommand,
-        label: "Discord",
+        label: "command.discord",
         shortcut: "⌘D",
         href: "https://discord.gg/yourinvite",
       },

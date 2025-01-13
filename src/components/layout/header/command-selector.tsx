@@ -8,9 +8,9 @@ import {
   Command,
   CommandDialog,
   CommandEmpty,
-  CommandGroup,
+  CommandGroup as UICommandGroup,
   CommandInput,
-  CommandItem,
+  CommandItem as UICommandItem,
   CommandList,
   CommandSeparator,
   CommandShortcut,
@@ -21,16 +21,19 @@ import {
 } from "./command-data";
 import { DialogTitle } from "@radix-ui/react-dialog";
 import { LucideCommand } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const CommandSelector: FC = () => {
   const [open, setOpen] = useState(false);
   const { toast } = useToast();
+  const t = useTranslations("HomePage");
 
-  // Attach toast to command data
+  // Attach toast to command data actions
   const commandData = rawCommandData.map((group) => ({
     ...group,
     items: group.items.map((item) => ({
       ...item,
+      // Wrap actions with toast injection if they exist
       action: item.action ? () => item.action!(toast) : undefined,
     })),
   }));
@@ -49,35 +52,35 @@ const CommandSelector: FC = () => {
         variant="ghost"
         size="icon"
         onClick={() => setOpen(true)}
-        aria-label="Open command menu"
+        aria-label={t("command.general")} // For accessibility, optional
       >
         <IconWrap>
           <LucideCommand className="m-2" size="20" strokeWidth={2} />
         </IconWrap>
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <DialogTitle></DialogTitle>
+        <DialogTitle>{/* Optionally place a title here */}</DialogTitle>
         <Command>
-          <CommandInput placeholder="Type a command or search..." />
+          <CommandInput placeholder={t("command.general")} />
           <CommandList>
-            <CommandEmpty>No results found.</CommandEmpty>
+            <CommandEmpty>{t("No results found.")}</CommandEmpty>
             {commandData.map((group, index) => (
               <div key={group.heading}>
-                <CommandGroup heading={group.heading}>
+                <UICommandGroup heading={t(group.heading)}>
                   {group.items.map((item) => (
-                    <CommandItem
+                    <UICommandItem
                       key={item.label}
                       className="cursor-pointer"
                       onSelect={() => handleItemClick(item)}
                     >
                       <item.icon className="mr-2" size={22} strokeWidth={2} />
-                      <span>{item.label}</span>
+                      <span>{t(item.label)}</span>
                       {item.shortcut && (
                         <CommandShortcut>{item.shortcut}</CommandShortcut>
                       )}
-                    </CommandItem>
+                    </UICommandItem>
                   ))}
-                </CommandGroup>
+                </UICommandGroup>
                 {index < commandData.length - 1 && <CommandSeparator />}
               </div>
             ))}

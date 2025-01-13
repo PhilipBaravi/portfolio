@@ -6,7 +6,33 @@
     "aboutMeBtn": "More about me",
     "resumeBtn": "Download Resume",
     "resumeBtnDownloading": "Downloading...",
-    "myStack": "My Go-To Technology Stack"
+    "myStack": "My Go-To Technology Stack",
+    "nav": {
+      "home": "Home",
+      "projects": "Projects",
+      "about": "About Me",
+      "technologies": "Technologies"
+    },
+    "command": {
+      "general": "General",
+      "copy": "Copy Link",
+      "copySuccess": "Copied!",
+      "copySuccessMessage": "Link copied to the clipboard.",
+      "copyFail": "Failed!",
+      "copyFailMessage": "Clipboard API not supported.",
+      "sourceCode": "Source Code",
+      "downloadResume": "Download Resume",
+      "projects": "Projects",
+      "socials": "Socials",
+      "invoiceHub": "InvoiceHub",
+      "positivus": "Positivus",
+      "reactHooksExplorer": "React Hooks Explorer",
+      "georgianTravelguide": "Georgian Travelguide",
+      "georgianTechnicalUniversity": "Georgian Technical University",
+      "github": "Github",
+      "linkedin": "LinkedIn",
+      "discord": "Discord"
+    }
   },
   "AboutMe": {
     "title": "About Me",
