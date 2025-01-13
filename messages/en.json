@@ -94,6 +94,7 @@
     "AI Tools": "AI Tools",
     "IDEs & Extensions": "IDEs & Extensions",
     "Other Tools": "Other Tools",
+    "Deployment": "Deployment",
 
     "TypeScript": {
       "description": "Typed superset of JavaScript"
@@ -199,6 +200,12 @@
     },
     "Elementor": {
       "description": "Interactive Building Tool"
+    },
+    "Vercel": {
+      "description": "Cloud Hosting Platform"
+    },
+    "GithubPages": {
+      "description": "Static Site Hosting"
     }
   }
 }

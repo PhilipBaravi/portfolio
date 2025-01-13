@@ -32,6 +32,7 @@ import {
   SiNpm,
   SiOpenai,
   SiWordpress,
+  SiVercel,
 } from "react-icons/si";
 import { CiGlobe } from "react-icons/ci";
 import { VscExtensions } from "react-icons/vsc"; // Icon for extensions category
@@ -195,6 +196,20 @@ export const tools = {
       description: "Keycloak.description",
       icon: <SiKeycloak className="w-full h-full" />,
       href: "https://www.keycloak.org/",
+    },
+  ],
+  Deployment: [
+    {
+      name: "Vercel",
+      description: "Vercel.description",
+      icon: <SiVercel className="w-full h-full" />,
+      href: "https://vercel.com/",
+    },
+    {
+      name: "GithubPages",
+      description: "GithubPages.description",
+      icon: <FaGithub className="w-full h-full" />,
+      href: "https://pages.github.com/",
     },
   ],
   "AI Tools": [

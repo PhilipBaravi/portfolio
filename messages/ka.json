@@ -94,6 +94,7 @@
     "AI Tools": "AI ინსტრუმენტები",
     "IDEs & Extensions": "IDE-ები და გაფართოებები",
     "Other Tools": "სხვა ინსტრუმენტები",
+    "Deployment": "Deployment",
 
     "TypeScript": {
       "description": "JavaScript-ის ტიპიზირებული სუპერსეტი"
@@ -199,6 +200,12 @@
     },
     "Elementor": {
       "description": "ინტერაქტიული მშენებლობის ინსტრუმენტი"
+    },
+    "Vercel": {
+      "description": "Cloud ჰოსტინგის პლატფორმა"
+    },
+    "GithubPages": {
+      "description": "სტატიკური საიტების ჰოსტინგი"
     }
   }
 }
