@@ -1,12 +1,13 @@
 {
   "HomePage": {
-    "title": "Hola, soy Philip – ¡Desarrollador Frontend en React!",
-    "subtitle": "👨‍💻 Me especializo en crear aplicaciones web modernas y fáciles de usar con React, TypeScript y tecnologías de vanguardia. 🌟 Mi enfoque está en ofrecer experiencias de usuario fluidas y en desarrollar código escalable y mantenible para proyectos dinámicos. 🔧✨",
+    "title": "Hola, soy Philip, ¡Desarrollador Frontend con React!",
+    "subtitle": "👨‍💻 Me especializo en construir aplicaciones web modernas y fáciles de usar utilizando React, TypeScript y tecnologías de vanguardia. 🌟 Mi enfoque está en crear experiencias de usuario fluidas y entregar código escalable y mantenible para proyectos dinámicos. 🔧✨",
     "reachAt": "No dudes en contactarme en",
     "aboutMeBtn": "Más sobre mí",
-    "resumeBtn": "Descargar currículum",
+    "resumeBtn": "Descargar CV",
     "resumeBtnDownloading": "Descargando...",
-    "myStack": "Mi stack tecnológico preferido",
+    "myStack": "Mi Stack Tecnológico Preferido",
+    "noresult": "No se encontraron resultados.",
     "nav": {
       "home": "Inicio",
       "projects": "Proyectos",
@@ -19,15 +20,15 @@
       "copySuccess": "¡Copiado!",
       "copySuccessMessage": "Enlace copiado al portapapeles.",
       "copyFail": "¡Error!",
-      "copyFailMessage": "API del portapapeles no soportada.",
-      "sourceCode": "Código fuente",
-      "downloadResume": "Descargar currículum",
+      "copyFailMessage": "La API del portapapeles no es compatible.",
+      "sourceCode": "Código Fuente",
+      "downloadResume": "Descargar CV",
       "projects": "Proyectos",
-      "socials": "Redes sociales",
+      "socials": "Redes Sociales",
       "invoiceHub": "InvoiceHub",
       "positivus": "Positivus",
-      "reactHooksExplorer": "Explorador de React Hooks",
-      "georgianTravelguide": "Guía de viajes de Georgia",
+      "reactHooksExplorer": "Explorador de Hooks de React",
+      "georgianTravelguide": "Guía de Viajes de Georgia",
       "georgianTechnicalUniversity": "Universidad Técnica de Georgia",
       "github": "Github",
       "linkedin": "LinkedIn",
@@ -38,47 +39,166 @@
     "title": "Sobre mí",
     "subtitle": "👋 ¡Hola! Soy Philip, un apasionado del desarrollo web.",
     "moreInfo": "Más información",
-    "checkStack": "Mira mi stack",
+    "checkStack": "Revisar mi stack",
     "description": {
-      "aboutOne": "Soy un apasionado desarrollador Front-End de React 🚀 con experiencia en la creación de sistemas de gestión sofisticados y aplicaciones web. Con una sólida base en tecnologías web modernas ⚙️ y atención a los detalles, me especializo en crear interfaces de usuario intuitivas que mejoran las operaciones empresariales.",
-      "aboutTwo": "Lo que me diferencia es mi compromiso con la entrega de código de alta calidad 🏆 y mi capacidad para traducir requisitos empresariales complejos en soluciones elegantes. Disfruto trabajar en entornos colaborativos 🤝 y constantemente recibo elogios por mi comunicación clara y habilidades para resolver problemas.",
+      "aboutOne": "Soy un apasionado Desarrollador Front-End con React 🚀 con experiencia en la creación de sistemas de gestión sofisticados y aplicaciones web. Con una sólida base en tecnologías web modernas ⚙️ y atención al detalle, me especializo en crear interfaces de usuario intuitivas que mejoran las operaciones empresariales.",
+      "aboutTwo": "Lo que me distingue es mi compromiso con la entrega de código de alta calidad 🏆 y mi habilidad para traducir requisitos empresariales complejos en soluciones elegantes. Me desenvuelvo bien en entornos colaborativos 🤝 y recibo constantemente elogios por mi comunicación clara y habilidades para resolver problemas.",
       "presence": "Mantengo una presencia activa en",
       "host": "Donde alojo mis proyectos y contribuyo a la comunidad de desarrolladores 🌐."
     },
     "challenges": {
-      "coding": "Retos de codificación",
-      "codewars": "De vez en cuando, mejoro mis habilidades de resolución de problemas en Codewars: "
+      "coding": "Desafíos de programación",
+      "codewars": "De vez en cuando afilo mis habilidades resolviendo problemas en Codewars: "
     },
     "currentProject": {
-      "title": "Proyecto actual: ",
-      "description": "⚙️ Actualmente estoy desarrollando InvoiceHub, mi primer proyecto SaaS, lo cual ha sido un viaje increíble implementando las mejores prácticas a nivel empresarial. Este proyecto demuestra mi experiencia en:",
+      "title": "Proyecto Actual: ",
+      "description": "⚙️ Actualmente estoy desarrollando InvoiceHub, mi primer proyecto SaaS, lo cual ha sido un viaje increíble implementando prácticas de nivel empresarial. Este proyecto muestra mi experiencia en:",
       "architecture": "Arquitectura limpia y principios SOLID 🤝",
       "state": "Gestión de estado escalable 🌱",
-      "performance": "Optimización del rendimiento",
-      "security": "Mejores prácticas de seguridad 🔒",
-      "pipelines": "Pipelines CI/CD completos con GitHub Actions 🔁",
-      "design": "Diseño responsivo para varios dispositivos 📱",
-      "focus": "Actualmente, me estoy enfocando en implementar estrategias avanzadas de almacenamiento en caché ⚡ para mejorar la recuperación de datos, resultando en un mejor rendimiento y experiencia de usuario.",
+      "performance": "Optimización de rendimiento",
+      "security": "Buenas prácticas de seguridad 🔒",
+      "pipelines": "Pipelines CI/CD con GitHub Actions 🔁",
+      "design": "Diseño responsive para varios dispositivos 📱",
+      "focus": "Actualmente, me estoy enfocando en implementar estrategias avanzadas de almacenamiento en caché ⚡ para mejorar la recuperación de datos, lo que resulta en un mejor rendimiento y experiencia de usuario.",
       "viewBtn": "Ver InvoiceHub"
     },
     "learning": {
-      "title": "Enfoque de aprendizaje actual",
+      "title": "Enfoque de Aprendizaje Actual",
       "subtitle": "Actualmente estoy profundizando mis conocimientos en",
-      "description": "y dominando patrones de diseño de bases de datos relacionales. Este enfoque continuo de aprendizaje asegura que me mantenga a la vanguardia en prácticas de desarrollo web."
+      "description": "y dominando patrones de diseño de bases de datos relacionales. Este enfoque de aprendizaje continuo asegura que me mantenga a la vanguardia de las prácticas de desarrollo web."
     }
   },
   "Projects": {
     "title": "Proyectos",
-    "subtitle": "La lista de mis proyectos. Todo fue hecho con ❤️.",
-    "visitSite": "Visitar sitio web",
+    "subtitle": "La lista de mis proyectos. Todo hecho con ❤️.",
+    "visitSite": "Visitar Sitio Web",
     "seeAll": "Ver todos los proyectos",
-    "invoicehub": "InvoiceHub es una plataforma integral diseñada para simplificar la gestión de facturas, productos, clientes y usuarios. Con una interfaz moderna, rápida y fácil de usar, InvoiceHub ofrece una experiencia excepcional impulsada por gráficos interactivos y herramientas avanzadas basadas en inteligencia artificial.",
-    "positivus": "Este es un proyecto de front-end totalmente responsivo e interactivo construido con React y Tailwind CSS. Cuenta con un diseño moderno y elegante, con el objetivo de proporcionar una experiencia excepcional en todos los dispositivos. El proyecto está basado en el diseño de la página de aterrizaje de Positivus en Figma.",
-    "reacthooks": "React Hooks Explorer – un proyecto interactivo diseñado para ayudar a los desarrolladores a dominar los hooks más usados en React mediante práctica práctica. Ya sea que estés aprendiendo, repasando tus conocimientos o preparándote para entrevistas, este proyecto ofrece descripciones, ejemplos, ejercicios y preguntas de entrevistas para cada hook, todo en un solo lugar.",
-    "travelguide": "Guía de Viajes de Georgia, proporciona a los usuarios información sobre los lugares más interesantes y notables de Georgia de la manera más conveniente, lo que ayudará a los usuarios a seleccionar las rutas óptimas y planificar los tours de manera efectiva.",
-    "gtu": "La Universidad Técnica de Georgia (GTU, anteriormente Instituto Politécnico Georgiano V.I. Lenin) es la universidad técnica principal y más grande de Georgia. Está ubicada en la ciudad capital de Tiflis."
+    "invoicehub": "InvoiceHub es una plataforma integral diseñada para simplificar la gestión de facturas, productos, clientes y usuarios. Con una interfaz moderna, rápida y fácil de usar, InvoiceHub ofrece una experiencia de usuario excepcional impulsada por gráficos interactivos y herramientas avanzadas con IA.",
+    "positivus": "Este es un proyecto completamente responsive e interactivo, construido con React y Tailwind CSS. Presenta un diseño moderno y elegante, con el objetivo de proporcionar una experiencia de usuario excepcional en todos los dispositivos. El proyecto está basado en el diseño de la página de inicio de Positivus de Figma.",
+    "reacthooks": "React Hooks Explorer – un proyecto interactivo diseñado para ayudar a los desarrolladores a dominar los hooks más utilizados de React a través de la práctica. Ya sea que estés aprendiendo, repasando tus conocimientos o preparándote para entrevistas, este proyecto ofrece descripciones, ejemplos, ejercicios y preguntas de entrevistas para cada hook, todo en un solo lugar.",
+    "travelguide": "Guía de Viajes de Georgia proporciona a los usuarios información sobre los lugares más interesantes y notables de Georgia de la manera más conveniente, lo que ayuda al usuario a seleccionar las rutas óptimas y planificar los recorridos de manera efectiva.",
+    "gtu": "La Universidad Técnica de Georgia (GTU, anteriormente Instituto Politécnico Georgiano V.I. Lenin) es la principal y mayor universidad técnica de Georgia. Está ubicada en la ciudad capital, Tiflis."
   },
-  "Greetings": {
-    "title": "¡Hola, soy Philip – Desarrollador Frontend en React!"
+  "Technologies": {
+    "title": "Tecnologías",
+    "subtitle": "Me especializo en construir aplicaciones utilizando las siguientes tecnologías.",
+
+    "Languages": "Lenguajes",
+    "Frameworks And Libraries": "Frameworks y Librerías",
+    "State Management": "Gestión de Estado",
+    "Internationalization": "Internacionalización",
+    "UI/UX": "UI/UX",
+    "Build Tools": "Herramientas de Construcción",
+    "Version Control": "Control de Versiones",
+    "Authentication": "Autenticación",
+    "AI Tools": "Herramientas de IA",
+    "IDEs & Extensions": "IDEs y Extensiones",
+    "Other Tools": "Otras Herramientas",
+
+    "TypeScript": {
+      "description": "Superset tipado de JavaScript"
+    },
+    "JavaScript": {
+      "description": "Lenguaje base para desarrollo web"
+    },
+    "HTML5": {
+      "description": "Lenguaje de marcado"
+    },
+    "CSS3": {
+      "description": "Lenguaje de estilos para diseño web"
+    },
+    "React": {
+      "description": "Librería de JavaScript para construir UIs"
+    },
+    "NextJS": {
+      "description": "Framework de React para SSR y SSG"
+    },
+    "TailwindCSS": {
+      "description": "Framework CSS basado en utilidades"
+    },
+    "Axios": {
+      "description": "Cliente HTTP basado en promesas"
+    },
+    "FramerMotion": {
+      "description": "Animaciones y transiciones"
+    },
+    "Zustand": {
+      "description": "Gestión de estado mínima"
+    },
+    "ContextAPI": {
+      "description": "Solución de contexto de React"
+    },
+    "i18next": {
+      "description": "Framework de internacionalización"
+    },
+    "nextIntl": {
+      "description": "Internacionalización para Next.js"
+    },
+    "ShadcnUI": {
+      "description": "Componentes preestilizados con Tailwind"
+    },
+    "Figma": {
+      "description": "Herramienta colaborativa de diseño"
+    },
+    "Bootstrap": {
+      "description": "Librería de componentes frontend"
+    },
+    "Vite": {
+      "description": "Herramienta de desarrollo frontend de última generación"
+    },
+    "Webpack": {
+      "description": "Empaquetador de módulos"
+    },
+    "Babel": {
+      "description": "Compilador de JavaScript"
+    },
+    "ESLint": {
+      "description": "Herramienta de análisis de código"
+    },
+    "Prettier": {
+      "description": "Formateador de código"
+    },
+    "Git": {
+      "description": "Sistema de control de versiones"
+    },
+    "GitHub": {
+      "description": "Plataforma de alojamiento de código"
+    },
+    "Keycloak": {
+      "description": "Gestión de identidad y acceso"
+    },
+    "ChatGPT": {
+      "description": "Herramienta de conversación con IA"
+    },
+    "v0": {
+      "description": "Herramienta de IA de Vercel"
+    },
+    "VSCode": {
+      "description": "Editor de código fuente de Microsoft"
+    },
+    "ESLintExtension": {
+      "description": "Integra ESLint en VSCode"
+    },
+    "PrettierExtension": {
+      "description": "Extensión para formatear código"
+    },
+    "TailwindCSSIntelliSense": {
+      "description": "Características avanzadas para Tailwind CSS"
+    },
+    "GitLens": {
+      "description": "Git potenciado en VSCode"
+    },
+    "ReactPropTypesIntelliSense": {
+      "description": "Autocompletar y análisis de PropTypes"
+    },
+    "npm": {
+      "description": "Gestor de paquetes de Node"
+    },
+    "Wordpress": {
+      "description": "Plataforma para crear sitios web"
+    },
+    "Elementor": {
+      "description": "Herramienta interactiva de construcción"
+    }
   }
 }

@@ -1,6 +1,16 @@
 "use client";
 
-import { FaReact, FaGithub, FaCss3Alt } from "react-icons/fa";
+import V0Icon from "./v0icon";
+import { VscVscode } from "react-icons/vsc";
+import {
+  FaReact,
+  FaGithub,
+  FaCss3Alt,
+  FaCubes,
+  FaNetworkWired,
+  FaBootstrap,
+  FaElementor,
+} from "react-icons/fa";
 import {
   SiTypescript,
   SiJavascript,
@@ -18,36 +28,37 @@ import {
   SiI18Next,
   SiShadcnui,
   SiFigma,
-  SiBootstrap,
   SiFramer,
   SiNpm,
   SiOpenai,
   SiWordpress,
 } from "react-icons/si";
+import { CiGlobe } from "react-icons/ci";
+import { VscExtensions } from "react-icons/vsc"; // Icon for extensions category
 
 export const tools = {
   Languages: [
     {
       name: "TypeScript",
-      description: "Typed superset of JavaScript",
+      description: "TypeScript.description",
       icon: <SiTypescript className="w-full h-full" />,
       href: "https://www.typescriptlang.org/",
     },
     {
       name: "JavaScript",
-      description: "Core language for web development",
+      description: "JavaScript.description",
       icon: <SiJavascript className="w-full h-full" />,
       href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     },
     {
       name: "HTML5",
-      description: "Markup language for structuring web content",
+      description: "HTML5.description",
       icon: <SiHtml5 className="w-full h-full" />,
       href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
     },
     {
       name: "CSS3",
-      description: "Styling language for web design",
+      description: "CSS3.description",
       icon: <FaCss3Alt className="w-full h-full" />,
       href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     },
@@ -55,90 +66,111 @@ export const tools = {
   "Frameworks And Libraries": [
     {
       name: "React",
-      description: "JavaScript library for building user interfaces",
+      description: "React.description",
       icon: <FaReact className="w-full h-full" />,
       href: "https://reactjs.org/",
     },
     {
       name: "Next.js",
-      description: "React framework for SSR and SSG",
+      description: "NextJS.description",
       icon: <SiNextdotjs className="w-full h-full" />,
       href: "https://nextjs.org/",
     },
     {
       name: "Tailwind CSS",
-      description: "Utility-first CSS framework",
+      description: "TailwindCSS.description",
       icon: <SiTailwindcss className="w-full h-full" />,
       href: "https://tailwindcss.com/",
     },
     {
       name: "Axios",
-      description: "Promise-based HTTP client",
+      description: "Axios.description",
       icon: <SiAxios className="w-full h-full" />,
       href: "https://axios-http.com/",
     },
     {
+      name: "Framer Motion",
+      description: "FramerMotion.description",
+      icon: <SiFramer className="w-full h-full" />,
+      href: "https://www.framer.com/motion/",
+    },
+  ],
+  "State Management": [
+    {
+      name: "Zustand",
+      description: "Zustand.description",
+      icon: <FaCubes className="w-full h-full" />,
+      href: "https://zustand-demo.pmnd.rs/",
+    },
+    {
+      name: "Context API",
+      description: "ContextAPI.description",
+      icon: <FaNetworkWired className="w-full h-full" />,
+      href: "https://react.dev/reference/react/useContext",
+    },
+  ],
+  Internationalization: [
+    {
       name: "i18next",
-      description: "Internationalization framework",
+      description: "i18next.description",
       icon: <SiI18Next className="w-full h-full" />,
       href: "https://www.i18next.com/",
     },
     {
-      name: "Framer Motion",
-      description: " For animations and transitions.",
-      icon: <SiFramer className="w-full h-full" />,
-      href: "https://motion.dev/",
+      name: "next-intl",
+      description: "nextIntl.description",
+      icon: <CiGlobe className="w-full h-full" />,
+      href: "https://next-intl.dev/",
     },
   ],
   "UI/UX": [
     {
       name: "Shadcn UI",
-      description: "For integrating pre-styled components with Tailwind CSS.",
+      description: "ShadcnUI.description",
       icon: <SiShadcnui className="w-full h-full" />,
       href: "https://ui.shadcn.com/",
     },
     {
       name: "Figma",
-      description:
-        "Figma helps design and development teams build great products, together.",
+      description: "Figma.description",
       icon: <SiFigma className="w-full h-full" />,
       href: "https://www.figma.com/",
     },
     {
       name: "Bootstrap",
-      description: "Powerful, extensible, and feature-packed frontend toolkit.",
-      icon: <SiBootstrap className="w-full h-full" />,
+      description: "Bootstrap.description",
+      icon: <FaBootstrap className="w-full h-full" />,
       href: "https://getbootstrap.com/",
     },
   ],
   "Build Tools": [
     {
       name: "Vite",
-      description: "Frontend build tool for modern web projects",
+      description: "Vite.description",
       icon: <SiVite className="w-full h-full" />,
       href: "https://vitejs.dev/",
     },
     {
       name: "Webpack",
-      description: "Module bundler for JavaScript applications",
+      description: "Webpack.description",
       icon: <SiWebpack className="w-full h-full" />,
       href: "https://webpack.js.org/",
     },
     {
       name: "Babel",
-      description: "JavaScript compiler",
+      description: "Babel.description",
       icon: <SiBabel className="w-full h-full" />,
       href: "https://babeljs.io/",
     },
     {
       name: "ESLint",
-      description: "Linting tool for identifying and fixing code issues",
+      description: "ESLint.description",
       icon: <SiEslint className="w-full h-full" />,
       href: "https://eslint.org/",
     },
     {
       name: "Prettier",
-      description: "Code formatter",
+      description: "Prettier.description",
       icon: <SiPrettier className="w-full h-full" />,
       href: "https://prettier.io/",
     },
@@ -146,43 +178,95 @@ export const tools = {
   "Version Control": [
     {
       name: "Git",
-      description: "Version control system",
+      description: "Git.description",
       icon: <SiGit className="w-full h-full" />,
       href: "https://git-scm.com/",
     },
     {
       name: "GitHub",
-      description: "Code hosting platform for version control",
+      description: "GitHub.description",
       icon: <FaGithub className="w-full h-full" />,
-      href: "https://github.com/PhilipBaravi",
+      href: "https://github.com/",
     },
   ],
   Authentication: [
     {
       name: "Keycloak",
-      description: "Open-source identity and access management",
+      description: "Keycloak.description",
       icon: <SiKeycloak className="w-full h-full" />,
       href: "https://www.keycloak.org/",
+    },
+  ],
+  "AI Tools": [
+    {
+      name: "ChatGPT",
+      description: "ChatGPT.description",
+      icon: <SiOpenai className="w-full h-full" />,
+      href: "https://chat.openai.com/",
+    },
+    {
+      name: "v0",
+      description: "v0.description",
+      icon: <V0Icon />,
+      href: "https://v0.dev/",
+    },
+  ],
+  "IDEs & Extensions": [
+    {
+      name: "VSCode",
+      description: "VSCode.description",
+      icon: <VscVscode className="w-full h-full" />,
+      href: "https://code.visualstudio.com/",
+    },
+    {
+      name: "ESLint Extension",
+      description: "ESLintExtension.description",
+      icon: <VscExtensions className="w-full h-full" />,
+      href: "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint",
+    },
+    {
+      name: "Prettier Extension",
+      description: "PrettierExtension.description",
+      icon: <VscExtensions className="w-full h-full" />,
+      href: "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode",
+    },
+    {
+      name: "Tailwind CSS IntelliSense",
+      description: "TailwindCSSIntelliSense.description",
+      icon: <VscExtensions className="w-full h-full" />,
+      href: "https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss",
+    },
+    {
+      name: "GitLens",
+      description: "GitLens.description",
+      icon: <VscExtensions className="w-full h-full" />,
+      href: "https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens",
+    },
+    {
+      name: "React PropTypes IntelliSense",
+      description: "ReactPropTypesIntelliSense.description",
+      icon: <VscExtensions className="w-full h-full" />,
+      href: "https://marketplace.visualstudio.com/items?itemName=OfHumanBondage.react-proptypes-intellisense",
     },
   ],
   "Other Tools": [
     {
       name: "npm",
-      description: "Node package manager.",
+      description: "npm.description",
       icon: <SiNpm className="w-full h-full" />,
       href: "https://www.npmjs.com/",
     },
     {
-      name: "ChatGPT",
-      description: "AI Tool",
-      icon: <SiOpenai className="w-full h-full" />,
-      href: "https://openai.com/",
-    },
-    {
       name: "Wordpress",
-      description: "Website building platform",
+      description: "Wordpress.description",
       icon: <SiWordpress className="w-full h-full" />,
       href: "https://wordpress.com/",
+    },
+    {
+      name: "Elementor",
+      description: "Elementor.description",
+      icon: <FaElementor className="w-full h-full" />,
+      href: "https://elementor.com/",
     },
   ],
 };

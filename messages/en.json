@@ -7,6 +7,7 @@
     "resumeBtn": "Download Resume",
     "resumeBtnDownloading": "Downloading...",
     "myStack": "My Go-To Technology Stack",
+    "noresult": "No results found.",
     "nav": {
       "home": "Home",
       "projects": "Projects",
@@ -78,7 +79,126 @@
     "travelguide": "GeorgianTravelGuide, provides users with the information about Georgia’s most interesting and remarkable places in the most convenient way, which will assist user to select the optimal routes and plan the tours effectively.",
     "gtu": "Georgian Technical University (GTU, formerly V.I. Lenin Georgian Polytechnical Institute) is the main and largest technical university of Georgia. It is located in the capital city of Tbilisi."
   },
-  "Greetings": {
-    "title": "Hi, I&apos;m Philip – React Frontend Developer!"
+  "Technologies": {
+    "title": "Technologies",
+    "subtitle": "I specialize in building applications using the following technologies.",
+
+    "Languages": "Languages",
+    "Frameworks And Libraries": "Frameworks And Libraries",
+    "State Management": "State Management",
+    "Internationalization": "Internationalization",
+    "UI/UX": "UI/UX",
+    "Build Tools": "Build Tools",
+    "Version Control": "Version Control",
+    "Authentication": "Authentication",
+    "AI Tools": "AI Tools",
+    "IDEs & Extensions": "IDEs & Extensions",
+    "Other Tools": "Other Tools",
+
+    "TypeScript": {
+      "description": "Typed superset of JavaScript"
+    },
+    "JavaScript": {
+      "description": "Core language for web development"
+    },
+    "HTML5": {
+      "description": "Markup language"
+    },
+    "CSS3": {
+      "description": "Styling language for web design"
+    },
+    "React": {
+      "description": "JavaScript library for building UIs"
+    },
+    "NextJS": {
+      "description": "React framework for SSR and SSG"
+    },
+    "TailwindCSS": {
+      "description": "Utility-first CSS framework"
+    },
+    "Axios": {
+      "description": "Promise-based HTTP client"
+    },
+    "FramerMotion": {
+      "description": "Animations and transitions"
+    },
+    "Zustand": {
+      "description": "Minimal state management"
+    },
+    "ContextAPI": {
+      "description": "React’s context solution"
+    },
+    "i18next": {
+      "description": "Internationalization framework"
+    },
+    "nextIntl": {
+      "description": "Internationalization for Next.js"
+    },
+    "ShadcnUI": {
+      "description": "Pre-styled components with Tailwind"
+    },
+    "Figma": {
+      "description": "Collaborative design tool"
+    },
+    "Bootstrap": {
+      "description": "Frontend component library"
+    },
+    "Vite": {
+      "description": "Next generation frontend toolchain"
+    },
+    "Webpack": {
+      "description": "Module bundler"
+    },
+    "Babel": {
+      "description": "JavaScript compiler"
+    },
+    "ESLint": {
+      "description": "Linting tool"
+    },
+    "Prettier": {
+      "description": "Code formatter"
+    },
+    "Git": {
+      "description": "Version control system"
+    },
+    "GitHub": {
+      "description": "Code hosting platform"
+    },
+    "Keycloak": {
+      "description": "Identity and access management"
+    },
+    "ChatGPT": {
+      "description": "AI conversational tool"
+    },
+    "v0": {
+      "description": "Vercel AI tool"
+    },
+    "VSCode": {
+      "description": "Source-code editor by Microsoft"
+    },
+    "ESLintExtension": {
+      "description": "Integrates ESLint into VSCode"
+    },
+    "PrettierExtension": {
+      "description": "Code formatter extension"
+    },
+    "TailwindCSSIntelliSense": {
+      "description": "Advanced features for Tailwind CSS"
+    },
+    "GitLens": {
+      "description": "Git supercharged in VSCode"
+    },
+    "ReactPropTypesIntelliSense": {
+      "description": "PropTypes autocomplete and linting"
+    },
+    "npm": {
+      "description": "Node package manager"
+    },
+    "Wordpress": {
+      "description": "Website building platform"
+    },
+    "Elementor": {
+      "description": "Interactive Building Tool"
+    }
   }
 }

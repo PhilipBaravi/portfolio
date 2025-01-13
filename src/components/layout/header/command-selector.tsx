@@ -52,7 +52,7 @@ const CommandSelector: FC = () => {
         variant="ghost"
         size="icon"
         onClick={() => setOpen(true)}
-        aria-label={t("command.general")} // For accessibility, optional
+        aria-label={t("command.general")}
       >
         <IconWrap>
           <LucideCommand className="m-2" size="20" strokeWidth={2} />
@@ -63,7 +63,7 @@ const CommandSelector: FC = () => {
         <Command>
           <CommandInput placeholder={t("command.general")} />
           <CommandList>
-            <CommandEmpty>{t("No results found.")}</CommandEmpty>
+            <CommandEmpty>{t("noresult")}</CommandEmpty>
             {commandData.map((group, index) => (
               <div key={group.heading}>
                 <UICommandGroup heading={t(group.heading)}>
