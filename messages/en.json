@@ -1,5 +1,42 @@
 {
   "HomePage": {
-    "title": "Hello world!"
+    "title": "Hi, I'm Philip – React Frontend Developer!",
+    "subtitle": "👨‍💻 I specialize in building modern, user-friendly web applications using React, TypeScript, and cutting-edge technologies. 🌟 My focus is on creating seamless user experiences and delivering scalable, maintainable code for dynamic projects. 🔧✨",
+    "reachAt": "Feel free to reach out to me at",
+    "aboutMeBtn": "More about me",
+    "resumeBtn": "Download Resume",
+    "resumeBtnDownloading": "Downloading...",
+    "myStack": "My Go-To Technology Stack"
+  },
+  "AboutMe": {
+    "title": "About Me",
+    "subtitle": "👋 Hi there! I am Philip, a guy who loves web development.",
+    "moreInfo": "More Information",
+    "checkStack": "Check my stack",
+    "description": {
+      "aboutOne": "I'm a passionate React Front-End Developer 🚀 with expertise in building sophisticated management systems and web applications. With a strong foundation in modern web technologies ⚙️ and an eye for detail, I specialize in creating intuitive user interfaces that enhance business operations.",
+      "aboutTwo": "What sets me apart is my commitment to delivering high-quality code 🏆 and my ability to translate complex business requirements into elegant solutions. I thrive in collaborative environments 🤝 and consistently receive praise for my clear communication and problem-solving abilities.",
+      "presence": "I maintain an active presence on",
+      "host": "Where I host my projects and contribute to the developer community 🌐."
+    },
+    "challenges": {
+      "coding": "Coding Challenges",
+      "codewars": "From time to time I sharpen my problem-solving skills on Codewars: "
+    },
+    "currentProject": {
+      "title": "Current Project: ",
+      "description": "⚙️ I&apos;m currently developing InvoiceHub, my first SaaS project, which has been an incredible journey in implementing enterprise-level best practices. This project showcases my expertise in:",
+      "architecture": "Clean Architecture and SOLID principles 🤝",
+      "state": "Scalable state management 🌱",
+      "performance": "Performance optimization",
+      "security": "Security best practices 🔒",
+      "pipelines": "Comprehensive CI/CD pipelines with GitHub Actions 🔁",
+      "design": "Responsive design for various devices 📱",
+      "focus": "Currently, I'm focusing on implementing advanced caching strategies ⚡ to enhance data retrieval, resulting in improved performance and user experience.",
+      "viewBtn": "View InvoiceHub"
+    }
+  },
+  "Greetings": {
+    "title": "Hi, I&apos;m Philip – React Frontend Developer!"
   }
 }

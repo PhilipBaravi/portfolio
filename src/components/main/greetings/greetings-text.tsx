@@ -4,24 +4,23 @@ import ResumeButton from "./resume-button";
 import P from "@/components/P";
 import MainBtn from "@/components/main-btn";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const GreetingsText: FC = () => {
+  const t = useTranslations("HomePage");
   return (
     <div className="max-w-2xl mx-auto px-4 py-8 flex flex-col justify-start items-start gap-y-6">
       <div className="flex flex-col gap-y-4">
         <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-gray-100 leading-tight tracking-tight mb-4">
-          Hi, I&apos;m Philip – React Frontend Developer!
+          {t("title")}
         </h1>
         <p className="text-lg md:text-xl text-gray-700 dark:text-stone-300 leading-relaxed">
-          👨‍💻 I specialize in building modern, user-friendly web applications
-          using React, TypeScript, and cutting-edge technologies. 🌟 My focus is
-          on creating seamless user experiences and delivering scalable,
-          maintainable code for dynamic projects. 🔧✨
+          {t("subtitle")}
         </p>
 
         <div className="flex flex-col gap-y-4">
           <P>
-            Feel free to reach out to me at{" "}
+            {t("reachAt")}{" "}
             <a
               href="mailto:philipbaravi@gmail.com"
               className="text-blue-500 hover:underline dark:text-blue-400"
@@ -37,7 +36,7 @@ const GreetingsText: FC = () => {
       <div className="flex flex-col md:flex-row gap-x-6 gap-y-4">
         <ResumeButton />
         <Link href="about">
-          <MainBtn title="More about me" />
+          <MainBtn title={t("aboutMeBtn")} />
         </Link>
       </div>
     </div>

@@ -1,5 +1,42 @@
 {
   "HomePage": {
-    "title": "Hello world! Spanish"
+    "title": "Hola, soy Philip – ¡Desarrollador Frontend en React!",
+    "subtitle": "👨‍💻 Me especializo en crear aplicaciones web modernas y fáciles de usar con React, TypeScript y tecnologías de vanguardia. 🌟 Mi enfoque está en ofrecer experiencias de usuario fluidas y en desarrollar código escalable y mantenible para proyectos dinámicos. 🔧✨",
+    "reachAt": "No dudes en contactarme en",
+    "aboutMeBtn": "Más sobre mí",
+    "resumeBtn": "Descargar currículum",
+    "resumeBtnDownloading": "Descargando...",
+    "myStack": "Mi stack tecnológico preferido"
+  },
+  "AboutMe": {
+    "title": "Sobre mí",
+    "subtitle": "👋 ¡Hola! Soy Philip, un apasionado del desarrollo web.",
+    "moreInfo": "Más información",
+    "checkStack": "Mira mi stack",
+    "description": {
+      "aboutOne": "Soy un apasionado desarrollador Front-End de React 🚀 con experiencia en la creación de sistemas de gestión sofisticados y aplicaciones web. Con una sólida base en tecnologías web modernas ⚙️ y atención a los detalles, me especializo en crear interfaces de usuario intuitivas que mejoran las operaciones empresariales.",
+      "aboutTwo": "Lo que me diferencia es mi compromiso con la entrega de código de alta calidad 🏆 y mi capacidad para traducir requisitos empresariales complejos en soluciones elegantes. Disfruto trabajar en entornos colaborativos 🤝 y constantemente recibo elogios por mi comunicación clara y habilidades para resolver problemas.",
+      "presence": "Mantengo una presencia activa en",
+      "host": "Donde alojo mis proyectos y contribuyo a la comunidad de desarrolladores 🌐."
+    },
+    "challenges": {
+      "coding": "Retos de codificación",
+      "codewars": "De vez en cuando, mejoro mis habilidades de resolución de problemas en Codewars: "
+    },
+    "currentProject": {
+      "title": "Proyecto actual: ",
+      "description": "⚙️ Actualmente estoy desarrollando InvoiceHub, mi primer proyecto SaaS, lo cual ha sido un viaje increíble implementando las mejores prácticas a nivel empresarial. Este proyecto demuestra mi experiencia en:",
+      "architecture": "Arquitectura limpia y principios SOLID 🤝",
+      "state": "Gestión de estado escalable 🌱",
+      "performance": "Optimización del rendimiento",
+      "security": "Mejores prácticas de seguridad 🔒",
+      "pipelines": "Pipelines CI/CD completos con GitHub Actions 🔁",
+      "design": "Diseño responsivo para varios dispositivos 📱",
+      "focus": "Actualmente, me estoy enfocando en implementar estrategias avanzadas de almacenamiento en caché ⚡ para mejorar la recuperación de datos, resultando en un mejor rendimiento y experiencia de usuario.",
+      "viewBtn": "Ver InvoiceHub"
+    }
+  },
+  "Greetings": {
+    "title": "¡Hola, soy Philip – Desarrollador Frontend en React!"
   }
 }

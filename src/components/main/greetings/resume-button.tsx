@@ -4,9 +4,11 @@ import { FC, useState } from "react";
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { handleDownload } from "@/lib/download";
+import { useTranslations } from "next-intl";
 
 const ResumeButton: FC = () => {
   const [isDownloading, setIsDownloading] = useState(false);
+  const t = useTranslations("HomePage");
 
   const downloadResume = () =>
     handleDownload(
@@ -26,12 +28,12 @@ const ResumeButton: FC = () => {
       {isDownloading ? (
         <span className="flex items-center">
           <Download className="animate-spin mr-2" size={20} />
-          Downloading...
+          {t("resumeBtnDownloading")}
         </span>
       ) : (
         <span className="flex items-center">
           <Download className="mr-2" size={20} />
-          Download Resume
+          {t("resumeBtn")}
         </span>
       )}
     </Button>
