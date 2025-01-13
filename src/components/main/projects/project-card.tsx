@@ -13,6 +13,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Link2 } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
+import { useTranslations } from "next-intl";
 
 interface ProjectCardProps {
   title: string;
@@ -30,7 +31,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
   imageUrl,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
-
+  const t = useTranslations("Projects");
   return (
     <Card
       className="w-full max-w-[400px] overflow-hidden h-[480px] flex flex-col bg-stone-50 dark:bg-stone-900 shadow-md transition-all duration-300 ease-in-out"
@@ -86,7 +87,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
               className="flex items-center justify-center"
             >
               <Link2 className="w-4 h-4 mr-2" />
-              Visit Website
+              {t("visitSite")}
               <ArrowRight className="w-4 h-4 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" />
             </a>
           </Button>

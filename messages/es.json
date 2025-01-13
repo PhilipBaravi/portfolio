@@ -34,7 +34,23 @@
       "design": "Diseño responsivo para varios dispositivos 📱",
       "focus": "Actualmente, me estoy enfocando en implementar estrategias avanzadas de almacenamiento en caché ⚡ para mejorar la recuperación de datos, resultando en un mejor rendimiento y experiencia de usuario.",
       "viewBtn": "Ver InvoiceHub"
+    },
+    "learning": {
+      "title": "Enfoque de aprendizaje actual",
+      "subtitle": "Actualmente estoy profundizando mis conocimientos en",
+      "description": "y dominando patrones de diseño de bases de datos relacionales. Este enfoque continuo de aprendizaje asegura que me mantenga a la vanguardia en prácticas de desarrollo web."
     }
+  },
+  "Projects": {
+    "title": "Proyectos",
+    "subtitle": "La lista de mis proyectos. Todo fue hecho con ❤️.",
+    "visitSite": "Visitar sitio web",
+    "seeAll": "Ver todos los proyectos",
+    "invoicehub": "InvoiceHub es una plataforma integral diseñada para simplificar la gestión de facturas, productos, clientes y usuarios. Con una interfaz moderna, rápida y fácil de usar, InvoiceHub ofrece una experiencia excepcional impulsada por gráficos interactivos y herramientas avanzadas basadas en inteligencia artificial.",
+    "positivus": "Este es un proyecto de front-end totalmente responsivo e interactivo construido con React y Tailwind CSS. Cuenta con un diseño moderno y elegante, con el objetivo de proporcionar una experiencia excepcional en todos los dispositivos. El proyecto está basado en el diseño de la página de aterrizaje de Positivus en Figma.",
+    "reacthooks": "React Hooks Explorer – un proyecto interactivo diseñado para ayudar a los desarrolladores a dominar los hooks más usados en React mediante práctica práctica. Ya sea que estés aprendiendo, repasando tus conocimientos o preparándote para entrevistas, este proyecto ofrece descripciones, ejemplos, ejercicios y preguntas de entrevistas para cada hook, todo en un solo lugar.",
+    "travelguide": "Guía de Viajes de Georgia, proporciona a los usuarios información sobre los lugares más interesantes y notables de Georgia de la manera más conveniente, lo que ayudará a los usuarios a seleccionar las rutas óptimas y planificar los tours de manera efectiva.",
+    "gtu": "La Universidad Técnica de Georgia (GTU, anteriormente Instituto Politécnico Georgiano V.I. Lenin) es la universidad técnica principal y más grande de Georgia. Está ubicada en la ciudad capital de Tiflis."
   },
   "Greetings": {
     "title": "¡Hola, soy Philip – Desarrollador Frontend en React!"

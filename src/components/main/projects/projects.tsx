@@ -7,6 +7,7 @@ import { projectsData } from "./projects-data";
 import { motion } from "framer-motion";
 import MainBtn from "@/components/main-btn";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 type ProjectsProps = {
   showButton?: boolean;
@@ -16,6 +17,7 @@ type ProjectsProps = {
 const Projects: FC<ProjectsProps> = ({ showButton = true, limit }) => {
   // Slice the projectsData array if a limit is provided
   const displayedProjects = limit ? projectsData.slice(0, limit) : projectsData;
+  const t = useTranslations("Projects");
 
   return (
     <section className="mb-8 space-y-4 w-[90%] md:w-[80%] lg:w-[70%] mx-auto">
@@ -40,7 +42,7 @@ const Projects: FC<ProjectsProps> = ({ showButton = true, limit }) => {
           >
             <ProjectCard
               title={project.title}
-              description={project.description}
+              description={t(project.description)}
               tags={project.tags}
               githubUrl={project.githubUrl}
               imageUrl={project.imageUrl}
@@ -61,7 +63,7 @@ const Projects: FC<ProjectsProps> = ({ showButton = true, limit }) => {
         >
           <div>
             <Link href="/projects">
-              <MainBtn title="See all projects" />
+              <MainBtn title={t("seeAll")} />
             </Link>
           </div>
         </motion.div>
