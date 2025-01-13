@@ -7,22 +7,41 @@ import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/toaster";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { Noto_Serif_Georgian } from "next/font/google";
+import { Inter } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Portfolio",
   description: "Philip Baravi - Personal Portfolio",
 };
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const notoSerifGeorgian = Noto_Serif_Georgian({
+  weight: ["400", "700"],
+  subsets: ["georgian"],
+  variable: "--font-noto-serif-georgian",
+});
+
 export default async function RootLayout({
   children,
+  params, // Make sure this is provided by your routing setup
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
+  const isGeorgian = params.locale === "ka"; // Check if the locale is Georgian
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      className={`${inter.className} ${
+        isGeorgian ? notoSerifGeorgian.className : ""
+      }`}
+    >
       <body className="w-screen overflow-x-hidden">
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider
