@@ -10,7 +10,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@huggingface/agents": "^0.0.5",
+    "@huggingface/hub": "^1.0.0",
+    "@huggingface/inference": "^2.8.1",
     "@next/font": "^14.2.15",
+    "@radix-ui/react-avatar": "^1.1.2",
     "@radix-ui/react-dialog": "^1.1.4",
     "@radix-ui/react-dropdown-menu": "^2.1.4",
     "@radix-ui/react-scroll-area": "^1.2.2",
@@ -31,6 +35,7 @@
     "next-i18next": "^15.4.1",
     "next-intl": "^3.26.3",
     "next-themes": "^0.4.4",
+    "openai": "^3.2.1",
     "philip-baravi": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

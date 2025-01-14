@@ -9,6 +9,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Noto_Serif_Georgian } from "next/font/google";
 import { Inter } from "next/font/google";
+import { Chat } from "@/components/chatbot/chat";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -54,6 +55,7 @@ export default async function RootLayout({
               <Header />
               <main className="flex-grow w-full flex flex-col items-center pt-[120px]">
                 {children}
+                <Chat />
                 <Analytics />
               </main>
               <Toaster />
