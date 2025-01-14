@@ -16,6 +16,8 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import TypingEffect from "./typingeffect";
+import FinalMessage from "./final-message";
+import AiImage from "../../../public/images/philip-ai-avatar.png";
 
 interface Message {
   role: "user" | "ai";
@@ -23,22 +25,51 @@ interface Message {
   isTyping?: boolean;
 }
 
+// Prompt quick-buttons
 const PROMPT_BUTTONS = [
   { text: "Tell me about Philip", prompt: "Tell me about Philip" },
   { text: "Philip's projects", prompt: "What projects has Philip worked on?" },
   { text: "Philip's skills", prompt: "What are Philip's main skills?" },
 ];
 
+// The special marker & final message
+const FINAL_MESSAGE_KEY = "__FINAL_MESSAGE__";
+const FINAL_MESSAGE = `If you want more info, email me at philip.baravi@gmail.com or text me at WhatsApp +34664587841. Also check my socials in the footer. You can’t send messages anymore.`;
+
+// The maximum number of prompts that call the API
+const MAX_API_PROMPTS = 3;
+
+// Welcome message
 const WELCOME_MESSAGE =
-  "Hello! I'm Philip's AI assistant, powered by the google/flan-t5-base model. How can I assist you today?";
+  "Hello! I'm Philip's AI assistant, powered by the OpenAi-s gpt4o model. How can I assist you today?";
 
 export function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showPromptButtons, setShowPromptButtons] = useState(true);
+
+  // ---------------------------------
+  //  Prompt count from localStorage
+  // ---------------------------------
+  const [promptCount, setPromptCount] = useState<number>(() => {
+    if (typeof window !== "undefined") {
+      const storedCount = localStorage.getItem("philip_prompt_count");
+      return storedCount ? parseInt(storedCount, 10) : 0;
+    }
+    return 0;
+  });
+
+  // Update localStorage whenever promptCount changes
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("philip_prompt_count", promptCount.toString());
+    }
+  }, [promptCount]);
+
   const scrollAreaRef = useRef<HTMLDivElement>(null);
 
+  // If no messages, add a welcome message
   useEffect(() => {
     if (messages.length === 0) {
       setMessages([
@@ -51,18 +82,21 @@ export function Chat() {
     }
   }, [messages.length]);
 
+  // Auto-scroll to bottom whenever messages change
   useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
     }
   }, [messages]);
 
+  // Mark message as done typing
   const handleMessageComplete = (index: number) => {
     setMessages((prev) =>
       prev.map((msg, i) => (i === index ? { ...msg, isTyping: false } : msg))
     );
   };
 
+  // Handle user input
   const handleSubmit = async (e: React.FormEvent | string) => {
     if (typeof e !== "string") {
       e.preventDefault();
@@ -71,14 +105,31 @@ export function Chat() {
     if (!userInput.trim()) return;
 
     setShowPromptButtons(false);
+
+    // 1) Always show user's message in chat first
     const userMessage: Message = { role: "user", content: userInput };
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
+
+    // 2) Check how many prompts have been used
+    if (promptCount >= MAX_API_PROMPTS) {
+      // 3) If user already used 3 prompts, the next (4th) is final
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "ai",
+          content: FINAL_MESSAGE_KEY, // <-- store the special marker
+          isTyping: false,
+        },
+      ]);
+      setPromptCount(MAX_API_PROMPTS + 1); // e.g. 4
+      return;
+    }
+
+    // Otherwise, call the API (promptCount < 3)
     setIsLoading(true);
 
     try {
-      // CHANGED: We are sending { userPrompt: userInput }
-      // to match the server route's expectation
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -86,26 +137,31 @@ export function Chat() {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to get response");
+        throw new Error("Chatbot is temporarily disabled.");
       }
 
       const data = await response.json();
+      if (data.error) {
+        throw new Error("Chatbot is temporarily disabled.");
+      }
 
-      // CHANGED: The server returns { result: ... }
-      // We read data.result instead of data.answer
+      // Add AI message to chat
       const aiMessage: Message = {
         role: "ai",
         content: data.result,
         isTyping: true,
       };
       setMessages((prev) => [...prev, aiMessage]);
+
+      // Increase count of used prompts
+      setPromptCount((prev) => prev + 1);
     } catch (error) {
       console.error("Error:", error);
       setMessages((prev) => [
         ...prev,
         {
           role: "ai",
-          content: "Sorry, I encountered an error. Please try again.",
+          content: "Chatbot is temporarily disabled.",
           isTyping: true,
         },
       ]);
@@ -114,6 +170,7 @@ export function Chat() {
     }
   };
 
+  // Render the chat
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -125,6 +182,7 @@ export function Chat() {
           <MessageCircle className="h-8 w-8" />
         </Button>
       </SheetTrigger>
+
       <SheetContent
         className="w-full sm:max-w-md flex flex-col p-0 dark:bg-stone-900"
         side="right"
@@ -133,49 +191,77 @@ export function Chat() {
           <SheetTitle></SheetTitle>
           <SheetDescription></SheetDescription>
         </SheetHeader>
+
         <ScrollArea className="flex-grow px-6 py-4" ref={scrollAreaRef}>
           <div className="space-y-4">
-            {messages.map((message, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-                className={`flex ${
-                  message.role === "user" ? "justify-end" : "justify-start"
-                }`}
-              >
-                {message.role === "ai" && (
-                  <Avatar className="mr-2 h-8 w-8">
-                    <AvatarImage src="/philip-ai-avatar.png" alt="AI" />
-                    <AvatarFallback>AI</AvatarFallback>
-                  </Avatar>
-                )}
-                <div
-                  className={`max-w-[80%] rounded-lg px-4 py-2 ${
-                    message.role === "user"
-                      ? "bg-stone-600 text-white dark:bg-stone-500 dark:text-stone-50"
-                      : "bg-white text-stone-900 shadow-sm dark:bg-stone-800 dark:text-stone-200"
+            {messages.map((message, index) => {
+              // If it's the final message marker, render <FinalMessage />
+              if (message.content === FINAL_MESSAGE_KEY) {
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="flex justify-start"
+                  >
+                    <Avatar className="mr-2 h-8 w-8">
+                      <AvatarImage src={AiImage.src} alt="AI" />
+                      <AvatarFallback>AI</AvatarFallback>
+                    </Avatar>
+                    <div className="max-w-[80%] rounded-lg px-4 py-2 bg-white text-stone-900 shadow-sm dark:bg-stone-800 dark:text-stone-200">
+                      <FinalMessage />
+                    </div>
+                  </motion.div>
+                );
+              }
+
+              // Normal messages (user or AI typed)
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className={`flex ${
+                    message.role === "user" ? "justify-end" : "justify-start"
                   }`}
                 >
-                  {message.isTyping ? (
-                    <TypingEffect
-                      text={message.content}
-                      onComplete={() => handleMessageComplete(index)}
-                    />
-                  ) : (
-                    message.content
+                  {message.role === "ai" && (
+                    <Avatar className="mr-2 h-8 w-8">
+                      <AvatarImage src={AiImage.src} alt="AI" />
+                      <AvatarFallback>AI</AvatarFallback>
+                    </Avatar>
                   )}
-                </div>
-                {message.role === "user" && (
-                  <Avatar className="ml-2 h-8 w-8">
-                    <AvatarFallback>
-                      <User className="h-5 w-5" />
-                    </AvatarFallback>
-                  </Avatar>
-                )}
-              </motion.div>
-            ))}
+                  <div
+                    className={`max-w-[80%] rounded-lg px-4 py-2 ${
+                      message.role === "user"
+                        ? "bg-stone-600 text-white dark:bg-stone-500 dark:text-stone-50"
+                        : "bg-white text-stone-900 shadow-sm dark:bg-stone-800 dark:text-stone-200"
+                    }`}
+                  >
+                    {/* If still typing, show the typing effect */}
+                    {message.isTyping ? (
+                      <TypingEffect
+                        text={message.content}
+                        onComplete={() => handleMessageComplete(index)}
+                      />
+                    ) : (
+                      message.content
+                    )}
+                  </div>
+                  {message.role === "user" && (
+                    <Avatar className="ml-2 h-8 w-8">
+                      <AvatarFallback>
+                        <User className="h-5 w-5" />
+                      </AvatarFallback>
+                    </Avatar>
+                  )}
+                </motion.div>
+              );
+            })}
+
+            {/* If the AI is "typing" a response */}
             {isLoading && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -183,7 +269,7 @@ export function Chat() {
                 className="flex justify-start"
               >
                 <Avatar className="mr-2 h-8 w-8">
-                  <AvatarImage src="/philip-ai-avatar.png" alt="AI" />
+                  <AvatarImage src={AiImage.src} alt="AI" />
                   <AvatarFallback>AI</AvatarFallback>
                 </Avatar>
                 <div className="max-w-[80%] rounded-lg px-4 py-2 bg-white text-stone-900 shadow-sm dark:bg-stone-800 dark:text-stone-200">
@@ -191,6 +277,8 @@ export function Chat() {
                 </div>
               </motion.div>
             )}
+
+            {/* Quick prompt buttons appear only if we have just the welcome message */}
             {showPromptButtons &&
               messages.length === 1 &&
               !messages[0].isTyping && (
@@ -214,21 +302,20 @@ export function Chat() {
               )}
           </div>
         </ScrollArea>
+
         <div className="flex-shrink-0 p-4 bg-stone-50 border-t dark:bg-stone-900 dark:border-stone-800">
-          <form
-            onSubmit={(e: React.FormEvent) => handleSubmit(e)}
-            className="flex space-x-2"
-          >
+          <form onSubmit={(e) => handleSubmit(e)} className="flex space-x-2">
             <Input
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Type your message..."
               className="flex-grow bg-white dark:bg-stone-800 dark:text-stone-200 dark:placeholder:text-stone-400"
+              disabled={isLoading || promptCount >= 4}
             />
             <Button
               type="submit"
               size="icon"
-              disabled={isLoading}
+              disabled={isLoading || promptCount >= 4}
               className="bg-stone-800 hover:bg-stone-700 text-white dark:bg-stone-700 dark:hover:bg-stone-600"
             >
               <Send className="h-4 w-4" />
