@@ -17,6 +17,7 @@ function FinalMessage() {
           "Phone number +34664587841 has been copied to your clipboard.",
       });
     } catch (error) {
+      console.error(error);
       toast({
         title: "Copy failed",
         description: "Could not copy the phone number.",

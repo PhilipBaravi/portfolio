@@ -83,7 +83,7 @@ export function Chat() {
         },
       ]);
     }
-  }, [messages.length]);
+  }, [messages.length, WELCOME_MESSAGE]);
 
   // Auto-scroll to bottom whenever messages change
   useEffect(() => {

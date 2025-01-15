@@ -16,6 +16,7 @@ const Phone: FC = () => {
         description: "Phone number copied to clipboard.",
       });
     } catch (error) {
+      console.error(error);
       toast({
         title: "Error",
         description: "Failed to copy phone number.",
