@@ -1,21 +1,12 @@
-// A special placeholder string to mark the final message.
-const FINAL_MESSAGE_KEY = "__FINAL_MESSAGE__";
-
-// Keep this as-is — no embedded links here
-// because we will detect FINAL_MESSAGE_KEY and render a React component instead.
-const FINAL_MESSAGE = `If you want more info, email me at philip.baravi@gmail.com 
-or text me at WhatsApp +34664587841. Also check my socials in the footer. 
-You can’t send messages anymore.`;
-
-// A small custom React component for your final message
+// A small custom React component for final message
 import { useClipboard } from "@/hooks/use-clipboard";
-// Example: if you have a toast system like react-hot-toast or your own:
 import { useToast } from "@/hooks/use-toast";
-// Adjust the above import to match however you display toasts in your code.
+import { useTranslations } from "next-intl";
 
 function FinalMessage() {
   const { copyToClipboard } = useClipboard();
-  const { toast } = useToast(); // or however you trigger your toast
+  const { toast } = useToast();
+  const t = useTranslations("Chat");
 
   const handleCopyPhone = async () => {
     try {
@@ -36,7 +27,7 @@ function FinalMessage() {
 
   return (
     <span>
-      If you want more info, email me at{" "}
+      {t("finalMsg.moreInfo")}{" "}
       <a
         href="mailto:philip.baravi@gmail.com"
         className="text-blue-600 hover:underline"
@@ -50,7 +41,7 @@ function FinalMessage() {
       >
         WhatsApp +34664587841
       </button>
-      . Also check my socials in the footer.
+      .{t("finalMsg.checkSocials")}
     </span>
   );
 }

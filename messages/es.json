@@ -207,5 +207,24 @@
     "GithubPages": {
       "description": "Alojamiento de sitios estáticos"
     }
+  },
+  "Chat": {
+    "title": "¡Hola! Soy el asistente de inteligencia artificial de Philip, impulsado por el modelo GPT-4 de OpenAI. ¿En qué puedo ayudarte hoy?",
+    "about": {
+      "text": "Cuéntame sobre Philip",
+      "prompt": "Cuéntame sobre Philip"
+    },
+    "projects": {
+      "text": "Los proyectos de Philip",
+      "prompt": "¿En qué proyectos ha trabajado Philip?"
+    },
+    "skills": {
+      "text": "Las habilidades de Philip",
+      "prompt": "¿Cuáles son las principales habilidades de Philip?"
+    },
+    "finalMsg": {
+      "moreInfo": "Si quieres más información, envíame un correo a",
+      "checkSocials": "También revisa mis redes sociales en el pie de página."
+    }
   }
 }

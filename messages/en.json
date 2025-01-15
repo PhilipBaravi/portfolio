@@ -207,5 +207,24 @@
     "GithubPages": {
       "description": "Static Site Hosting"
     }
+  },
+  "Chat": {
+    "title": "Hello! I'm Philip's AI assistant, powered by OpenAI's GPT-4 model. How can I assist you today?",
+    "about": {
+      "text": "Tell me about Philip",
+      "prompt": "Tell me about Philip"
+    },
+    "projects": {
+      "text": "Philip's projects",
+      "prompt": "What projects has Philip worked on?"
+    },
+    "skills": {
+      "text": "Philip's skills",
+      "prompt": "What are Philip's main skills?"
+    },
+    "finalMsg": {
+      "moreInfo": "If you want more info, email me at",
+      "checkSocials": " Also check my socials in the footer."
+    }
   }
 }

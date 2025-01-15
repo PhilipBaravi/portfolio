@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Separator } from "@/components/ui/separator";
 import Socials from "@/components/main/greetings/socials/socials";
+import Phone from "./phone";
 
 const Footer: FC = () => {
   return (
@@ -25,21 +26,12 @@ const Footer: FC = () => {
                 philipbaravi@gmail.com
               </a>
             </div>
+
             <Separator
               orientation="vertical"
               className="hidden sm:block h-6 bg-stone-400 dark:bg-stone-600"
             />
-            <div className="flex items-center gap-2">
-              <p className="text-sm text-stone-600 dark:text-stone-400">
-                Tel.:
-              </p>
-              <a
-                href="tel:+34664587841"
-                className="text-sm text-stone-700 dark:text-stone-300 hover:underline"
-              >
-                +34 (664) 587-841
-              </a>
-            </div>
+            <Phone />
             <Separator
               orientation="vertical"
               className="hidden sm:block h-6 bg-stone-400 dark:bg-stone-600"

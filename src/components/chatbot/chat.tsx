@@ -18,6 +18,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import TypingEffect from "./typingeffect";
 import FinalMessage from "./final-message";
 import AiImage from "../../../public/images/philip-ai-avatar.png";
+import { useTranslations } from "next-intl";
 
 interface Message {
   role: "user" | "ai";
@@ -25,36 +26,38 @@ interface Message {
   isTyping?: boolean;
 }
 
-// Prompt quick-buttons
-const PROMPT_BUTTONS = [
-  { text: "Tell me about Philip", prompt: "Tell me about Philip" },
-  { text: "Philip's projects", prompt: "What projects has Philip worked on?" },
-  { text: "Philip's skills", prompt: "What are Philip's main skills?" },
-];
-
-// The special marker & final message
-const FINAL_MESSAGE_KEY = "__FINAL_MESSAGE__";
-const FINAL_MESSAGE = `If you want more info, email me at philip.baravi@gmail.com or text me at WhatsApp +34664587841. Also check my socials in the footer. You can’t send messages anymore.`;
-
-// The maximum number of prompts that call the API
-const MAX_API_PROMPTS = 3;
-
-// Welcome message
-const WELCOME_MESSAGE =
-  "Hello! I'm Philip's AI assistant, powered by the OpenAi-s gpt4o model. How can I assist you today?";
-
 export function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showPromptButtons, setShowPromptButtons] = useState(true);
+  const t = useTranslations("Chat");
+
+  // Prompt quick-buttons
+  const PROMPT_BUTTONS = [
+    { text: t("about.text"), prompt: t("about.prompt") },
+    {
+      text: t("projects.text"),
+      prompt: t("projects.prompt"),
+    },
+    { text: t("skills.text"), prompt: t("skills.prompt") },
+  ];
+
+  // The special marker & final message
+  const FINAL_MESSAGE_KEY = "__FINAL_MESSAGE__";
+
+  // The maximum number of prompts that call the API
+  const MAX_API_PROMPTS = 3;
+
+  // Welcome message
+  const WELCOME_MESSAGE = t("title");
 
   // ---------------------------------
   //  Prompt count from localStorage
   // ---------------------------------
   const [promptCount, setPromptCount] = useState<number>(() => {
     if (typeof window !== "undefined") {
-      const storedCount = localStorage.getItem("philip_prompt_count");
+      const storedCount = localStorage.getItem("prompt_count");
       return storedCount ? parseInt(storedCount, 10) : 0;
     }
     return 0;
@@ -63,7 +66,7 @@ export function Chat() {
   // Update localStorage whenever promptCount changes
   useEffect(() => {
     if (typeof window !== "undefined") {
-      localStorage.setItem("philip_prompt_count", promptCount.toString());
+      localStorage.setItem("prompt_count", promptCount.toString());
     }
   }, [promptCount]);
 
@@ -184,7 +187,9 @@ export function Chat() {
       </SheetTrigger>
 
       <SheetContent
-        className="w-full sm:max-w-md flex flex-col p-0 dark:bg-stone-900"
+        className="
+        w-full sm:max-w-md flex flex-col p-0 dark:bg-stone-900 border-0 outline-none focus:outline-none focus:ring-0 focus-visible:ring-0
+      "
         side="right"
       >
         <SheetHeader>
@@ -236,7 +241,7 @@ export function Chat() {
                   <div
                     className={`max-w-[80%] rounded-lg px-4 py-2 ${
                       message.role === "user"
-                        ? "bg-stone-600 text-white dark:bg-stone-500 dark:text-stone-50"
+                        ? "bg-stone-900 text-white dark:bg-stone-700 dark:text-stone-50"
                         : "bg-white text-stone-900 shadow-sm dark:bg-stone-800 dark:text-stone-200"
                     }`}
                   >
