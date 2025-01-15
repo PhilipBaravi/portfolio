@@ -4,11 +4,13 @@ import { FC } from "react";
 import { useTheme } from "next-themes";
 import { useToast } from "@/hooks/use-toast";
 import { useClipboard } from "@/hooks/use-clipboard";
+import { useTranslations } from "next-intl";
 
 const DiscordIcon: FC = () => {
   const { theme } = useTheme();
   const { toast } = useToast();
   const { copyToClipboard } = useClipboard();
+  const t = useTranslations("HomePage");
 
   const discordUsername = "philip5198.";
 
@@ -16,14 +18,14 @@ const DiscordIcon: FC = () => {
     try {
       await copyToClipboard(discordUsername);
       toast({
-        title: "Copied!",
-        description: "Discord link copied to the clipboard",
+        title: t("discord.success"),
+        description: t("discord.successMsg"),
       });
     } catch (error) {
       console.error(error);
       toast({
-        title: "Error!",
-        description: "Failed to copy the Discord link",
+        title: t("discord.error"),
+        description: t("discord.errorMsg"),
       });
     }
   };

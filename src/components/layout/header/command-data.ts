@@ -19,7 +19,9 @@ export interface CommandGroup {
   items: CommandItem[];
 }
 
-export const commandData: CommandGroup[] = [
+export const commandData = (
+  translate: (key: string) => string
+): CommandGroup[] => [
   {
     heading: "command.general", // use translation key
     items: [
@@ -30,13 +32,13 @@ export const commandData: CommandGroup[] = [
           if (toast && "clipboard" in navigator) {
             navigator.clipboard.writeText("https://portfolio-url.example.com/");
             toast({
-              title: "command.copySuccess", // Key for title
-              description: "command.copySuccessMessage", // Key for description
+              title: translate("command.copySuccess"), // Translate here
+              description: translate("command.copySuccessMessage"), // Translate here
             });
           } else if (toast) {
             toast({
-              title: "command.copyFail",
-              description: "command.copyFailMessage",
+              title: translate("command.copyFail"),
+              description: translate("command.copyFailMessage"),
               variant: "destructive",
             });
           }

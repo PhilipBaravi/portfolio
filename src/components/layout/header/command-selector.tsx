@@ -29,11 +29,10 @@ const CommandSelector: FC = () => {
   const t = useTranslations("HomePage");
 
   // Attach toast to command data actions
-  const commandData = rawCommandData.map((group) => ({
+  const commandData = rawCommandData(t).map((group) => ({
     ...group,
     items: group.items.map((item) => ({
       ...item,
-      // Wrap actions with toast injection if they exist
       action: item.action ? () => item.action!(toast) : undefined,
     })),
   }));

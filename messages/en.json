@@ -14,6 +14,12 @@
       "about": "About Me",
       "technologies": "Technologies"
     },
+    "discord": {
+      "success": "Copied!",
+      "successMsg": "Discord link copied to the clipboard.",
+      "error": "Error!",
+      "errorMsg": "Failed to copy the Discord link."
+    },
     "command": {
       "general": "General",
       "copy": "Copy Link",
@@ -225,6 +231,12 @@
     "finalMsg": {
       "moreInfo": "If you want more info, email me at",
       "checkSocials": " Also check my socials in the footer."
+    },
+    "phoneToast": {
+      "success": "Number copied!",
+      "successMsg": "Phone number +34664587841 has been copied to your clipboard.",
+      "error": "Copy failed",
+      "errorMsg": "Could not copy the phone number."
     }
   }
 }

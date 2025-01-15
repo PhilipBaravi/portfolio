@@ -12,15 +12,14 @@ function FinalMessage() {
     try {
       await copyToClipboard("+34664587841");
       toast({
-        title: "Number copied!",
-        description:
-          "Phone number +34664587841 has been copied to your clipboard.",
+        title: t("phoneToast.success"),
+        description: t("phoneToast.successMsg"),
       });
     } catch (error) {
       console.error(error);
       toast({
-        title: "Copy failed",
-        description: "Could not copy the phone number.",
+        title: t("phoneToast.error"),
+        description: t("phoneToast.errorMsg"),
         variant: "destructive",
       });
     }
