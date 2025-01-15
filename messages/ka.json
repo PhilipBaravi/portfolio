@@ -215,7 +215,7 @@
     }
   },
   "Chat": {
-    "title": "გამარჯობა! მე ვარ ფილიპეს AI ასისტენტი, დაფუძნებული OpenAI-ის GPT-4 მოდელზე. რით შემიძლია დაგეხმარო დღეს?",
+    "title": "Hello! I'm Philip's AI assistant, powered by OpenAI's GPT-4 model. How can I assist you today?",
     "about": {
       "text": "ფილიპეს შესახებ",
       "prompt": "მითხარი ფილიპეს შესახებ"
