@@ -1,0 +1,125 @@
+{
+  "basicInfo": {
+    "name": "Philip",
+    "age": 26,
+    "location": {
+      "current": "Barcelona, Spain",
+      "hometown": "Tbilisi, Georgia"
+    },
+    "tagline": "Frontend developer specializing in React, Next.js, TypeScript, TailwindCSS, and ShadCN UI"
+  },
+  "skills": {
+    "languages": ["TypeScript", "JavaScript", "HTML5", "CSS3"],
+    "frameworksAndLibraries": [
+      "React",
+      "Next.js",
+      "TailwindCSS",
+      "Axios",
+      "Framer Motion"
+    ],
+    "stateManagement": ["Zustand", "Context API"],
+    "internationalization": ["i18next", "next-intl"],
+    "uiUx": ["ShadCN UI", "Figma", "Bootstrap"],
+    "buildTools": ["Vite", "Webpack", "Babel", "ESLint", "Prettier"],
+    "versionControl": ["Git", "GitHub"],
+    "authentication": ["Keycloak"],
+    "deployment": ["Vercel", "GitHub Pages"],
+    "aiTools": ["ChatGPT", "v0"],
+    "idesAndExtensions": [
+      "VSCode",
+      "ESLint Extension",
+      "Prettier Extension",
+      "Tailwind CSS IntelliSense",
+      "GitLens",
+      "React PropTypes IntelliSense"
+    ],
+    "otherTools": ["npm", "WordPress", "Elementor"]
+  },
+  "projects": [
+    {
+      "name": "InvoiceHub",
+      "description": "A comprehensive platform designed to simplify the management of invoices, products, clients, and customers with a modern, fast, and user-friendly interface.",
+      "stack": [
+        "React",
+        "TypeScript",
+        "React Router",
+        "TailwindCSS",
+        "ShadCN",
+        "Keycloak",
+        "Framer Motion",
+        "Recharts",
+        "Radix UI"
+      ],
+      "liveLink": "https://example-invoicehub.com"
+    },
+    {
+      "name": "Positivus",
+      "description": "An interactive front-end project featuring modern design and sleek responsiveness, aimed at enhancing user experience.",
+      "stack": ["React", "TailwindCSS", "React Router", "Figma"],
+      "liveLink": "https://example-positivus.com"
+    },
+    {
+      "name": "React Hooks Explorer",
+      "description": "A project to help developers master React hooks through hands-on practice, offering interactive challenges and examples.",
+      "stack": ["React", "React Router", "Monaco Editor"],
+      "liveLink": "https://example-hooksexplorer.com"
+    },
+    {
+      "name": "Georgian Travel Guide",
+      "description": "Provides information about Georgia's most remarkable places, helping users plan their trips conveniently.",
+      "stack": ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap"],
+      "liveLink": "https://example-georgiantravel.com"
+    },
+    {
+      "name": "Georgian Technical University",
+      "description": "The official site of Georgia's largest technical university, designed with modern functionality and usability.",
+      "stack": ["Bitrix", "Forms", "Markup", "JavaScript"],
+      "liveLink": "https://example-gtu.com"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Frontend Developer",
+      "company": "InvoiceHub",
+      "duration": "Aug 2024 - Present",
+      "description": "Built and maintained a comprehensive invoicing platform with React, TypeScript, and TailwindCSS."
+    },
+    {
+      "role": "Sales Coordinator",
+      "company": "Saltz International",
+      "duration": "Nov 2023 - May 2024",
+      "description": "Managed logistics and commercial transport operations, enhancing regional market penetration and revenue growth."
+    },
+    {
+      "role": "WordPress Developer",
+      "company": "Upwork (Freelance)",
+      "duration": "Dec 2022 - May 2023",
+      "description": "Developed responsive websites using WordPress, Elementor, and Forms."
+    },
+    {
+      "role": "Frontend Developer",
+      "company": "Georgian Technical University",
+      "duration": "Feb 2020 - Dec 2020",
+      "description": "Developed features for the university's website, focusing on responsive design and user engagement."
+    }
+  ],
+  "hobbies": [
+    "Coding",
+    "Learning about machine learning",
+    "Exploring web development"
+  ],
+  "contact": {
+    "phone": "+34 664 587 841",
+    "email": "philip.baravi@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/philip-baravi-2b2a521a2/",
+    "preferredMethods": ["WhatsApp", "Call", "Email"]
+  },
+  "preferences": {
+    "tone": {
+      "friendly": false,
+      "professional": true,
+      "sarcasmLevel": 3
+    },
+    "language": ["English", "Spanish", "Georgian"]
+  }
+}
