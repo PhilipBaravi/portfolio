@@ -20,10 +20,10 @@ const Footer: FC = () => {
                 Email:
               </p>
               <a
-                href="mailto:philipbaravi@gmail.com"
+                href="mailto:philip.baravi@gmail.com"
                 className="text-sm text-stone-700 dark:text-stone-300 hover:underline"
               >
-                philipbaravi@gmail.com
+                philip.baravi@gmail.com
               </a>
             </div>
 

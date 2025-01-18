@@ -2,6 +2,7 @@ import { FC } from "react";
 import Image from "next/image";
 import P from "@/components/P";
 import { useTranslations } from "next-intl";
+import CodewarsIcon from "./codewars-svg";
 
 const CodingChallenges: FC = () => {
   const t = useTranslations("AboutMe");
@@ -12,13 +13,7 @@ const CodingChallenges: FC = () => {
       </h3>
       <P>{t("challenges.codewars")}</P>
 
-      <Image
-        src="https://www.codewars.com/users/PhilipBaravi/badges/large"
-        alt="Codewars Profile Badge"
-        width={400}
-        height={40}
-        className="rounded-md"
-      />
+      <CodewarsIcon />
     </div>
   );
 };

@@ -22,10 +22,10 @@ const GreetingsText: FC = () => {
           <P>
             {t("reachAt")}{" "}
             <a
-              href="mailto:philipbaravi@gmail.com"
+              href="mailto:philip.baravi@gmail.com"
               className="text-blue-500 hover:underline dark:text-blue-400"
             >
-              philipbaravi@gmail.com
+              philip.baravi@gmail.com
             </a>
             .
           </P>
