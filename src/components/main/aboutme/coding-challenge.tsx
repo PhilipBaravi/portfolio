@@ -1,5 +1,4 @@
 import { FC } from "react";
-import Image from "next/image";
 import P from "@/components/P";
 import { useTranslations } from "next-intl";
 import CodewarsIcon from "./codewars-svg";
