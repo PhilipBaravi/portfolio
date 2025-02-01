@@ -3,6 +3,7 @@ import positivus from "../../../../public/images/positivus.png";
 import travelguide from "../../../../public/images/travelguide.png";
 import gtu from "../../../../public/images/gtu.png";
 import hooks from "../../../../public/images/hooks.png";
+import zentry from "../../../../public/images/zentry-clone.png";
 
 export const projectsData = [
   {
@@ -52,6 +53,15 @@ export const projectsData = [
   },
   {
     id: 4,
+    title: "zentryClone",
+    description: "zentryClone",
+    tags: ["Next.js 15", "tailwindcss", "gsap"],
+    githubUrl: "https://zentry-clone-xi.vercel.app/",
+    imageUrl: zentry,
+  },
+
+  {
+    id: 5,
 
     title: "Georgian TravelGuide",
     description: "travelguide",
@@ -60,7 +70,7 @@ export const projectsData = [
     imageUrl: travelguide,
   },
   {
-    id: 5,
+    id: 6,
 
     title: "Georgian Technical University",
     description: "gtu",

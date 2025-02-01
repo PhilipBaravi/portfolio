@@ -58,7 +58,7 @@
     },
     "currentProject": {
       "title": "Current Project: ",
-      "description": "⚙️ I&apos;m currently developing InvoiceHub, my first SaaS project, which has been an incredible journey in implementing enterprise-level best practices. This project showcases my expertise in:",
+      "description": "⚙️ I'm currently developing InvoiceHub, my first SaaS project, which has been an incredible journey in implementing enterprise-level best practices. This project showcases my expertise in:",
       "architecture": "Clean Architecture and SOLID principles 🤝",
       "state": "Scalable state management 🌱",
       "performance": "Performance optimization",
@@ -81,6 +81,7 @@
     "seeAll": "See all projects",
     "invoicehub": "InvoiceHub is a comprehensive platform designed to simplify the management of invoices, products, clients, and customers. With a modern, fast, and user-friendly interface, InvoiceHub offers an exceptional user experience powered by interactive charts and cutting-edge AI-driven tools.",
     "positivus": "This is a fully responsive and interactive front-end project built with React and Tailwind CSS. It features a modern and sleek design, aiming to provide an exceptional user experience across all devices. The project is based on the Positivus Landing Page Design from Figma.",
+    "zentryClone": "Zentry Clone is a sleek web app built with Next.js and GSAP, replicating smooth animations and seamless page transitions. It leverages Next.js for performance and GSAP for fluid motion effects, enhancing UI/UX interactions and animation skills.",
     "reacthooks": "React Hooks Explorer – an interactive project designed to help developers master the most commonly used React hooks through hands-on practice. Whether you're learning, brushing up on your knowledge, or preparing for interviews, this project offers descriptions, examples, exercises, and interview questions for each hook, all in one place.",
     "travelguide": "GeorgianTravelGuide, provides users with the information about Georgia’s most interesting and remarkable places in the most convenient way, which will assist user to select the optimal routes and plan the tours effectively.",
     "gtu": "Georgian Technical University (GTU, formerly V.I. Lenin Georgian Polytechnical Institute) is the main and largest technical university of Georgia. It is located in the capital city of Tbilisi."
