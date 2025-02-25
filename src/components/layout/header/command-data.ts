@@ -49,11 +49,6 @@ export const commandData = (
         label: "command.sourceCode",
         href: "https://github.com/PhilipBaravi/portfolio",
       },
-      {
-        icon: FileUser,
-        label: "command.downloadResume",
-        action: () => handleDownload("/resume.pdf", "resume.pdf"),
-      },
     ],
   },
   {

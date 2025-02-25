@@ -27,7 +27,7 @@ const CurrentProject: FC = () => {
       <P>{t("currentProject.focus")}</P>
 
       <div className="pt-4">
-        <Link href="/projects/invoicehub">
+        <Link href="https://invoicehub.space">
           <MainBtn title={t("currentProject.viewBtn")} />
         </Link>
       </div>
