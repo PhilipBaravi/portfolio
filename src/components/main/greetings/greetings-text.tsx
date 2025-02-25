@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Skills from "./skills";
-import ResumeButton from "./resume-button";
+// import ResumeButton from "./resume-button";
 import P from "@/components/P";
 import MainBtn from "@/components/main-btn";
 import Link from "next/link";
@@ -34,7 +34,7 @@ const GreetingsText: FC = () => {
 
       <Skills />
       <div className="flex flex-col md:flex-row gap-x-6 gap-y-4">
-        <ResumeButton />
+        {/* <ResumeButton /> */}
         <Link href="about">
           <MainBtn title={t("aboutMeBtn")} />
         </Link>

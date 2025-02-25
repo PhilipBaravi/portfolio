@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useState } from "react";
+import { type FC, useState } from "react";
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { handleDownload } from "@/lib/download";
@@ -23,7 +23,7 @@ const ResumeButton: FC = () => {
       onClick={downloadResume}
       disabled={isDownloading}
       variant="outline"
-      className="bg-stone-100 hover:bg-stone-200 text-stone-800 border-stone-300 hover:border-stone-400 font-medium py-2 px-6 rounded-full shadow-md transition duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-stone-400 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed"
+      className="bg-stone-100 hover:bg-stone-200 text-stone-800 border-stone-300 hover:border-stone-400 font-medium py-2 px-6 rounded-full shadow-md transition duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-stone-400 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-stone-800 dark:hover:bg-stone-700 dark:text-stone-100 dark:border-stone-600 dark:hover:border-stone-500 dark:focus:ring-stone-500"
     >
       {isDownloading ? (
         <span className="flex items-center">
