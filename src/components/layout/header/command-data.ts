@@ -102,12 +102,6 @@ export const commandData = (
       },
       {
         icon: LucideCommand,
-        label: "command.linkedin",
-        shortcut: "⌘L",
-        href: "https://www.linkedin.com/in/philip-baravi-2b2a521a2/",
-      },
-      {
-        icon: LucideCommand,
         label: "command.discord",
         shortcut: "⌘D",
         href: "https://discord.gg/yourinvite",
