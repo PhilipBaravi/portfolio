@@ -1,5 +1,4 @@
-import { Code, FileUser, LucideCommand, Copy } from "lucide-react";
-import { handleDownload } from "@/lib/download";
+import { Code, LucideCommand, Copy } from "lucide-react";
 
 export interface ToastOptions {
   title: string;

@@ -48,7 +48,7 @@ const generateSystemMessage = (language: "spanish" | "english") => {
 
   const hobbies = profileData.hobbies.join(", ");
 
-  const contactInfo = `Phone: ${profileData.contact.phone}, Email: ${profileData.contact.email}, LinkedIn: ${profileData.contact.linkedin}`;
+  const contactInfo = `Phone: ${profileData.contact.phone}, Email: ${profileData.contact.email}`;
 
   const toneInstructions =
     language === "spanish"
