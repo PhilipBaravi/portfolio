@@ -217,6 +217,15 @@
     },
     "GithubPages": {
       "description": "Hosting de sitios estáticos"
+    },
+    "NodeJs": {
+      "description": "Entorno de ejecución de JavaScript"
+    },
+    "MongoDB": {
+      "description": "Base de datos NoSQL"
+    },
+    "Postgres": {
+      "description": "Base de datos SQL"
     }
   },
   "Chat": {

@@ -10,6 +10,7 @@ import {
   FaNetworkWired,
   FaBootstrap,
   FaElementor,
+  FaNodeJs,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -33,6 +34,8 @@ import {
   SiOpenai,
   SiWordpress,
   SiVercel,
+  SiMongodb,
+  SiPostgresql,
 } from "react-icons/si";
 import { CiGlobe } from "react-icons/ci";
 import { VscExtensions } from "react-icons/vsc"; // Icon for extensions category
@@ -142,6 +145,26 @@ export const tools = {
       description: "Bootstrap.description",
       icon: <FaBootstrap className="w-full h-full" />,
       href: "https://getbootstrap.com/",
+    },
+  ],
+  "Back-End": [
+    {
+      name: "NodeJS",
+      description: "NodeJs.description",
+      icon: <FaNodeJs className="w-full h-full" />,
+      href: "https://nodejs.org/en",
+    },
+    {
+      name: "MongoDB",
+      description: "MongoDB.description",
+      icon: <SiMongodb className="w-full h-full" />,
+      href: "https://www.mongodb.com/",
+    },
+    {
+      name: "PostgreSQL",
+      description: "Postgres.description",
+      icon: <SiPostgresql className="w-full h-full" />,
+      href: "https://www.postgresql.org/",
     },
   ],
   "Build Tools": [

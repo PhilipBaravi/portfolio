@@ -217,6 +217,15 @@
     },
     "GithubPages": {
       "description": "სტატიკური საიტების ჰოსტინგი"
+    },
+    "NodeJs": {
+      "description": "JavaScript-ის შესრულების გარემო"
+    },
+    "MongoDB": {
+      "description": "NoSQL მონაცემთა ბაზა"
+    },
+    "Postgres": {
+      "description": "SQL მონაცემთა ბაზა"
     }
   },
   "Chat": {
