@@ -147,7 +147,7 @@ export const tools = {
       href: "https://getbootstrap.com/",
     },
   ],
-  "Back-End": [
+  BackEnd: [
     {
       name: "NodeJS",
       description: "NodeJs.description",
