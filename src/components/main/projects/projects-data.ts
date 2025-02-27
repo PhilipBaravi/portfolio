@@ -4,6 +4,10 @@ import travelguide from "../../../../public/images/travelguide.png";
 import gtu from "../../../../public/images/gtu.png";
 import hooks from "../../../../public/images/hooks.png";
 import zentry from "../../../../public/images/zentry-clone.png";
+import artCollege from "../../../../public/images/artCollege.png";
+import shacman from "../../../../public/images/shacman.png";
+import sitrak from "../../../../public/images/sitrak.png";
+import saliz from "../../../../public/images/saliz.png";
 
 export const projectsData = [
   {
@@ -30,7 +34,6 @@ export const projectsData = [
   },
   {
     id: 2,
-
     title: "Positivus",
     description: "positivus",
     tags: ["react", "tailwindcss", "react router", "figma"],
@@ -62,7 +65,6 @@ export const projectsData = [
 
   {
     id: 5,
-
     title: "Georgian TravelGuide",
     description: "travelguide",
     tags: ["html", "css", "javascript", "jquery", "bootstrap"],
@@ -71,11 +73,56 @@ export const projectsData = [
   },
   {
     id: 6,
-
     title: "Georgian Technical University",
     description: "gtu",
     tags: ["bitrix", "forms", "markup", "javascript"],
     githubUrl: "https://old.gtu.ge/Eng/",
     imageUrl: gtu,
+  },
+  {
+    id: 7,
+    title: "Tbilisi Art College",
+    description: "artCollege",
+    tags: ["wordpress", "seo optimization"],
+    githubUrl: "http://artcollege.edu.ge/",
+    imageUrl: artCollege,
+  },
+  {
+    id: 8,
+    title: "Shacman Auto",
+    description: "shacman",
+    tags: [
+      "wordpress",
+      "elementor",
+      "seo optimization",
+      "mailing system",
+      "advanced plugins",
+    ],
+    githubUrl: "https://shacman-auto.ru/",
+    imageUrl: shacman,
+  },
+  {
+    id: 9,
+    title: "Sitrak",
+    description: "sitrak",
+    tags: [
+      "bitrix",
+      "javascript",
+      "HTML",
+      "CSS",
+      "SQL",
+      "REST API",
+      "SEO Optimization",
+    ],
+    githubUrl: "https://sitrak-rba.ru/",
+    imageUrl: sitrak,
+  },
+  {
+    id: 10,
+    title: "Saliz",
+    description: "saliz",
+    tags: ["Wordpress", "HTML", "CSS", "JavaScript", "jQuery"],
+    githubUrl: "http://saliz.ru",
+    imageUrl: saliz,
   },
 ];
