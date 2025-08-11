@@ -1,6 +1,6 @@
 {
   "HomePage": {
-    "title": "Hola, soy Philip – ¡Desarrollador Frontend!",
+    "title": "Hola, soy Philip – ¡Desarrollador React!",
     "subtitle": "👨‍💻 Me especializo en construir aplicaciones web modernas y fáciles de usar utilizando React, TypeScript y tecnologías de vanguardia. 🌟 Mi enfoque está en crear experiencias de usuario fluidas y entregar código escalable y mantenible para proyectos dinámicos. 🔧✨",
     "reachAt": "No dudes en contactarme en",
     "aboutMeBtn": "Más sobre mí",
@@ -47,7 +47,7 @@
     "moreInfo": "Más información",
     "checkStack": "Revisa mi stack",
     "description": {
-      "aboutOne": "Soy un apasionado Desarrollador Frontend de React 🚀 con experiencia en la creación de sistemas de gestión y aplicaciones web sofisticadas. Con una base sólida en tecnologías web modernas ⚙️ y un ojo para los detalles, me especializo en crear interfaces de usuario intuitivas que mejoran las operaciones comerciales.",
+      "aboutOne": "Soy un apasionado Desarrollador React de React 🚀 con experiencia en la creación de sistemas de gestión y aplicaciones web sofisticadas. Con una base sólida en tecnologías web modernas ⚙️ y un ojo para los detalles, me especializo en crear interfaces de usuario intuitivas que mejoran las operaciones comerciales.",
       "aboutTwo": "Lo que me distingue es mi compromiso con entregar código de alta calidad 🏆 y mi capacidad para traducir requisitos comerciales complejos en soluciones elegantes. Me desenvuelvo bien en entornos colaborativos 🤝 y recibo constantemente elogios por mi comunicación clara y habilidades para resolver problemas.",
       "presence": "Mantengo una presencia activa en",
       "host": "Donde alojo mis proyectos y contribuyo a la comunidad de desarrolladores 🌐."
@@ -81,7 +81,9 @@
     "seeAll": "Ver todos los proyectos",
     "invoicehub": "InvoiceHub es una plataforma integral diseñada para simplificar la gestión de facturas, productos, clientes y usuarios. Con una interfaz moderna, rápida y fácil de usar, InvoiceHub ofrece una experiencia excepcional con gráficos interactivos y herramientas avanzadas impulsadas por IA.",
     "positivus": "Este es un proyecto frontend completamente interactivo y responsive, construido con React y Tailwind CSS. Cuenta con un diseño moderno y elegante, con el objetivo de proporcionar una experiencia de usuario excepcional en todos los dispositivos. El proyecto está basado en el diseño de la página de aterrizaje de Positivus de Figma.",
-    "zentryClone": "Zentry Clone es una elegante aplicación web creada con Next.js y GSAP, que replica animaciones fluidas y transiciones de página sin interrupciones. Aprovecha Next.js para mejorar el rendimiento y GSAP para lograr efectos de movimiento suaves, lo que optimiza la interacción UI/UX y mejora las habilidades de animación.",
+    "inspiraui": "Inspira UI es una aplicación web moderna y responsive construida con Next.js y Nuxt.js, que presenta animaciones suaves impulsadas por GSAP. Muestra principios avanzados de diseño UI/UX y proporciona una experiencia de usuario fluida en todos los dispositivos.",
+    "netdeployai": "NetworkDeployAI es un proyecto innovador que utiliza IA para construir redes resilientes. Participé en el hackathon AI for Connectivity, donde desarrollamos una solución que mejora la conectividad y la gestión de redes utilizando herramientas de inteligencia artificial.",
+    "shopco": "ShopCo es una aplicación web de comercio electrónico construida con Next.js, TypeScript, Tailwind CSS y ShadcnUI. Ofrece una experiencia de compra fluida y moderna, con un enfoque en la usabilidad y el rendimiento.",
     "reacthooks": "React Hooks Explorer – un proyecto interactivo diseñado para ayudar a los desarrolladores a dominar los hooks más comunes de React a través de la práctica. Ya sea que estés aprendiendo, repasando o preparándote para entrevistas, este proyecto ofrece descripciones, ejemplos, ejercicios y preguntas de entrevistas para cada hook, todo en un solo lugar.",
     "travelguide": "Guía de Viajes de Georgia proporciona a los usuarios información sobre los lugares más interesantes y notables de Georgia de la manera más conveniente, lo que ayudará a los usuarios a seleccionar las rutas óptimas y planificar los tours de manera efectiva.",
     "gtu": "La Universidad Técnica de Georgia (GTU, anteriormente Instituto Politécnico Georgiano V.I. Lenin) es la principal y más grande universidad técnica de Georgia. Está ubicada en la ciudad capital de Tbilisi.",
